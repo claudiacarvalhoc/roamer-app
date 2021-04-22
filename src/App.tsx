@@ -2,9 +2,19 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import { useAppSelector, useAppDispatch } from './app/hooks';
+import {
+  expand,
+  collapse,
+  selectAppTitle
+} from './appSlice';
+
+export default function App() {
+  const title = useAppSelector(selectAppTitle);
+  // const dispatch = useAppDispatch();
   return (
     <div className="App">
+      <h1>{title}</h1>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -22,5 +32,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
