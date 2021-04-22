@@ -1,20 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback } from 'react';
+import logo from '../../logo.svg';
+import './styles.css';
+import Menu from '../menu';
 
-import { useAppSelector, useAppDispatch } from './app/hooks';
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
   expand,
   collapse,
   selectAppTitle
-} from './appSlice';
+} from '../../slice/appSlice';
 
 export default function App() {
   const title = useAppSelector(selectAppTitle);
+  const handleClick = useCallback(() => {
+    console.log('Clicked!');
+  }, []);
   // const dispatch = useAppDispatch();
   return (
     <div className="App">
       <h1>{title}</h1>
+      <Menu />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

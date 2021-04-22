@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> render correctly with primary type 1`] = `
+<button
+  0="p"
+  1="r"
+  2="i"
+  3="m"
+  4="a"
+  5="r"
+  6="y"
+  className="button primary"
+  onClick={[MockFunction]}
+>
+  Button name
+</button>
+`;
+
+exports[`<Button /> render correctly with secondary type 1`] = `
+<button
+  0="s"
+  1="e"
+  2="c"
+  3="o"
+  4="n"
+  5="d"
+  6="a"
+  7="r"
+  8="y"
+  className="button secondary"
+  onClick={[MockFunction]}
+>
+  Button name
+</button>
+`;

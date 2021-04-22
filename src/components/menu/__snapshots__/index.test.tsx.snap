@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Menu /> render correctly 1`] = `
+<div
+  className="menu"
+>
+  <Button
+    data-test="button-new-project"
+    onClick={[Function]}
+    type="primary"
+  />
+  <Button
+    onClick={[Function]}
+    type="secondary"
+  />
+  <Button
+    onClick={[Function]}
+    type="secondary"
+  />
+</div>
+`;
