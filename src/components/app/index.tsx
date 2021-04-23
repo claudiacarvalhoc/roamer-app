@@ -1,39 +1,56 @@
-import React, { useCallback } from 'react';
-import logo from '../../logo.svg';
+import React, { FC, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { ProjectProperties } from '../../redux/appState';
 import './styles.css';
 import Menu from '../menu';
+import Project from '../project';
+import { getProjects } from '../../redux/fetch';
+import { AppDispatch } from '../../redux/store';
+import { RootState } from '../../redux/reducers';
+import { isExpanded, projects } from '../../redux/app/selectors';
 
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import {
-  expand,
-  collapse,
-  selectAppTitle
-} from '../../slice/appSlice';
+export interface AppOwnProps {
 
-export default function App() {
-  const title = useAppSelector(selectAppTitle);
-  const handleClick = useCallback(() => {
-    console.log('Clicked!');
+}
+
+export interface AppStateProps {
+  expand: boolean;
+  projects: ProjectProperties[];
+}
+
+export interface AppDispatchProps {
+  fetchProjects: () => void;
+}
+
+export type AppProps = AppOwnProps & AppStateProps & AppDispatchProps;
+
+const App: FC<AppProps> = ({ fetchProjects }) => {
+  useEffect(() => {
+    console.log('invoke getProjectsAsync');
+    fetchProjects();
   }, []);
-  // const dispatch = useAppDispatch();
+
+
   return (
     <div className="App">
-      <h1>{title}</h1>
       <Menu />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Project />
     </div>
   );
-}
+};
+
+const mapStateToProps = (state: RootState): AppStateProps => ({
+  expand: isExpanded(state),
+  projects: projects(state),
+});
+
+const mapDispatchToProps = (
+  dispatch: AppDispatch
+): AppDispatchProps => ({
+  fetchProjects: () => dispatch(getProjects())
+});
+
+export default connect<AppStateProps, AppDispatchProps>(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
