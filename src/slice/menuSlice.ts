@@ -42,7 +42,4 @@ export const selectProjectText = (state: RootState) => state.menu.projectText;
 export const selectExpandText = (state: RootState) => state.menu.expandText;
 export const selectCollapseText = (state: RootState) => state.menu.collapseText;
 
-export const selectExpand = (state: RootState) => state.app.expand;
-export const selectAppTitle = (state: RootState) => state.app.title;
-
 export default menuReducer.reducer;
