@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import React, { FC } from 'react';
 import './styles.css';
 import Button from '../button';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
@@ -12,10 +12,10 @@ import {
 } from '../../slice/menuSlice';
 
 
-export interface ButtonProperties {
+export interface MenuProperties {
 }
 
-const Menu: FC<ButtonProperties> = () => {
+const Menu: FC<MenuProperties> = () => {
     const dispatch = useAppDispatch();
     const projectText = useAppSelector(selectProjectText);
     const expandText = useAppSelector(selectExpandText);

@@ -18,7 +18,7 @@ const initialState: MenuState = {
 
 
 export const menuReducer = createSlice({
-    name: 'counter',
+    name: 'menu',
     initialState,
     reducers: {
         expand: (state) => {

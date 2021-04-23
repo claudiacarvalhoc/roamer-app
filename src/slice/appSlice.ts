@@ -30,7 +30,7 @@ export const incrementAsync = createAsyncThunk(
 );
 
 export const appSlice = createSlice({
-    name: 'counter',
+    name: 'app',
     initialState,
     reducers: {
         expand: (state) => {
