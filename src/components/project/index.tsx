@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { ProjectProperties } from '../../redux/appState';
 import Summary from '../summary';
-// import cn from 'classnames';
+import cn from 'classnames';
 import styles from './project.module.css';
 import Language from '../language';
 import Divider from '../divider';
@@ -13,6 +13,7 @@ import { isExpanded, projectTexts } from '../../redux/app/selectors';
 import Button from '../button';
 
 export interface ProjectOwnProps {
+    className: string;
     project: ProjectProperties;
 }
 
@@ -26,16 +27,16 @@ export interface ProjectDispatchProps {
 
 export type ProjectProps = ProjectOwnProps & ProjectStateProps & ProjectDispatchProps;
 
-const Project: FC<ProjectProps> = ({ isExpanded, addLanguageText, project }) => {
+const Project: FC<ProjectProps> = ({ className, isExpanded, addLanguageText, project }) => {
     const { translationSections } = project;
     const isTranslationEmpty = translationSections.length === 0;
     return (
-        <div className={styles.container}>
+        <div className={cn(className, styles.container, {
+            [styles.collapsed]: !isExpanded
+        })}>
+            <Summary project={project} />
             {isExpanded && (
                 <>
-                    <div className={styles.summary}>
-                        <Summary project={project} />
-                    </div>
                     <Divider className={styles.divider} />
                     <div className={styles.cards}>
                         {!isTranslationEmpty && translationSections.map(translation => <Card key={`translation_${translation.id}`} className={styles.card} translation={translation} />)}
@@ -43,11 +44,6 @@ const Project: FC<ProjectProps> = ({ isExpanded, addLanguageText, project }) => 
                     </div>
                 </>)
             }
-            {!isExpanded && (
-                <div className={styles.summary}>
-                    <Summary project={project} />
-                </div>
-            )}
         </div >
     );
 };

@@ -1,9 +1,9 @@
 import { Action } from 'redux';
 import { ProjectProperties } from "../appState";
-import { PROJECT_LOAD_SUCCESS, EXPAND_PROJECTS, COLLAPSE_PROJECTS } from "../types";
+import { ADD_PROJECT, EXPAND_PROJECTS, COLLAPSE_PROJECTS } from "../types";
 
-export interface ProjectLoadSuccess extends Action<string> {
-    projects: ProjectProperties[];
+export interface addProjectAction extends Action<string> {
+    project: ProjectProperties;
 }
 
 export interface ExpandProjectsAction extends Action {
@@ -13,11 +13,11 @@ export interface CollapseProjectAction extends Action {
 
 }
 
-export const projectsLoadSuccess = (
-    projects: ProjectProperties[]
-): ProjectLoadSuccess => ({
-    type: PROJECT_LOAD_SUCCESS,
-    projects,
+export const addProjectAction = (
+    project: ProjectProperties
+): addProjectAction => ({
+    type: ADD_PROJECT,
+    project,
 });
 
 export const expandProjectsAction = (): ExpandProjectsAction => ({
@@ -28,6 +28,5 @@ export const collapseProjectAction = (): CollapseProjectAction => ({
     type: COLLAPSE_PROJECTS,
 });
 
-
 export type AppActions =
-    | ProjectLoadSuccess;
+    | addProjectAction;

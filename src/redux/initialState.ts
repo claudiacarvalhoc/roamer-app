@@ -17,7 +17,6 @@ export const projectsInitialState: ProjectTextsProperties = {
     addLanguageText: 'Add language',
 };
 
-
 export const projectInitialState: ProjectProperties = {
     id: 1,
     name: 'Roamer App (Android SDK test)',
@@ -149,7 +148,30 @@ export const appInitialState: AppState = {
     expand: true,
     projects: [
         projectInitialState,
+        projectInitialState
     ],
     menuTexts: menuInitialState,
     projectTexts: projectsInitialState,
+};
+
+export const newProjectInitialState: ProjectProperties = {
+    id: 0,
+    name: 'Roamer App (Android SDK test)',
+    done: 0,
+    baseWords: 160246,
+    team: 26,
+    keys: 1834,
+    issues: 47514,
+    icons: ['up', 'down', 'check', 'user', 'rate', 'camera', 'book'],
+    badges: [
+        {
+            name: 'Roamer',
+            type: 'orange',
+        },
+        {
+            name: 'iOS',
+            type: 'green',
+        }
+    ],
+    translationSections: [],
 };

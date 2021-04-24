@@ -2,8 +2,8 @@
     display: flex;
 }
 
-.summary {
-
+.collapsed {
+    margin-right: 20px;
 }
 
 .divider {

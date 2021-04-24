@@ -1,7 +1,5 @@
-// import { ActionTypes } from '../types';
-import { Reducer, combineReducers } from 'redux';
 import { AppActions } from './actions';
-import { PROJECT_LOAD_SUCCESS, EXPAND_PROJECTS, COLLAPSE_PROJECTS } from "../types";
+import { ADD_PROJECT, EXPAND_PROJECTS, COLLAPSE_PROJECTS } from "../types";
 import { AppState } from '../appState';
 import { projectStub } from '../../stubs/project';
 
@@ -32,10 +30,18 @@ export const appReducer = (
     action: AppActions
 ): AppState => {
     switch (action.type) {
-        case PROJECT_LOAD_SUCCESS:
+        case ADD_PROJECT:
+            const id = state.projects.length;
+            const project = {
+                ...action.project,
+                id,
+                name: `${action.project.name} ${id}`,
+            };
+            const projects = state.projects.slice();
+            projects.push(project);
             return {
                 ...state,
-                projects: action.projects,
+                projects
             };
         case EXPAND_PROJECTS:
             return {
