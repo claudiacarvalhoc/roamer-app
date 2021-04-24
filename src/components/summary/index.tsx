@@ -7,6 +7,7 @@ import { projectTexts } from '../../redux/app/selectors';
 import { connect } from 'react-redux';
 import ProgressBar from '../progressbar';
 import Label from '../label';
+import Icons from '../icons';
 
 
 export interface SummaryOwnProps {
@@ -35,6 +36,7 @@ const Summary: FC<SummaryProps> = ({ project, texts }) => {
             <div className={styles.line}>
                 <Label name={texts.qaIssuesText} value={`${project.issues}`} highlighted={true} />
             </div>
+            <Icons className={styles.icons} />
         </>
     );
 };
