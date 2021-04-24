@@ -9,7 +9,7 @@ exports[`<ProgressBar /> render correctly with medium size 1`] = `
       Object {
         "border": "2px solid #CFCFCF",
         "height": 0,
-        "width": "205px",
+        "width": "100%",
       }
     }
   >
@@ -36,7 +36,7 @@ exports[`<ProgressBar /> render correctly with percentage greater then 80 1`] = 
       Object {
         "border": "2px solid #CFCFCF",
         "height": 0,
-        "width": "205px",
+        "width": "100%",
       }
     }
   >
@@ -63,7 +63,7 @@ exports[`<ProgressBar /> render correctly with percentage lower then 20 1`] = `
       Object {
         "border": "2px solid #CFCFCF",
         "height": 0,
-        "width": "160px",
+        "width": "100%",
       }
     }
   >
@@ -90,7 +90,7 @@ exports[`<ProgressBar /> render correctly with percentage lower then 40 1`] = `
       Object {
         "border": "2px solid #CFCFCF",
         "height": 0,
-        "width": "205px",
+        "width": "100%",
       }
     }
   >
@@ -117,7 +117,7 @@ exports[`<ProgressBar /> render correctly with small size 1`] = `
       Object {
         "border": "2px solid #CFCFCF",
         "height": 0,
-        "width": "160px",
+        "width": "100%",
       }
     }
   >

@@ -36,3 +36,9 @@
 .badge {
     margin-right: 2px;
 }
+
+@media (max-width: 480px) {
+    .container {
+        width: 220px;
+    }
+}

@@ -24,7 +24,7 @@ const Summary: FC<SummaryProps> = ({ project, texts }) => {
     return (
         <div className={styles.container}>
             <h1 className={styles.summaryTitle}>{project.name}</h1>
-            <ProgressBar className={styles.progressBar} percentage={project.done} size={'small'} />
+            <ProgressBar className={styles.progressBar} percentage={project.done} />
             <div className={styles.line}>
                 <Label name={texts.doneText} value={`${project.done}%`} highlighted={false} />
                 <Label name={texts.baseWordsText} value={`${project.baseWords}`} highlighted={false} />

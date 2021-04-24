@@ -3,21 +3,17 @@ import cn from 'classnames';
 
 export interface ProgressBarProps {
     className: string;
-    percentage: number,
-    size: 'medium' | 'small';
+    percentage: number;
 }
 
 const RED_HEX_CODE = '#DB1F35';
 const YELLOW_HEX_CODE = '#FFC400';
 const BLUE_HEX_CODE = '#5489DC';
 
-const SMALL_SIZE = 160;
-const MEDIUM_SIZE = 205;
-
-const ProgressBar: FC<ProgressBarProps> = ({ className, percentage, size }) => {
+const ProgressBar: FC<ProgressBarProps> = ({ className, percentage }) => {
     const containerStyle = {
         height: 0,
-        width: `${getSize(size)}px`,
+        width: '100%',
         'border': '2px solid #CFCFCF',
     };
     const progressStyle = {
@@ -35,8 +31,6 @@ const ProgressBar: FC<ProgressBarProps> = ({ className, percentage, size }) => {
         </div>
     );
 };
-
-const getSize = (size: string) => size === 'medium' ? MEDIUM_SIZE : SMALL_SIZE;;
 
 const getColor = (percentage: number) => {
     if (percentage > 0 && percentage < 25) {

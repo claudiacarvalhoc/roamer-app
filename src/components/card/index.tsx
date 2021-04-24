@@ -24,7 +24,7 @@ const Card: FC<CardProps> = ({ className, translation, texts }) => {
 
     return (<div className={cn(className, styles.container)}>
         <Language name={translation.language} flag={translation.country} />
-        <ProgressBar className={styles.progressBar} percentage={translation.done} size={'medium'} />
+        <ProgressBar className={styles.progressBar} percentage={translation.done} />
         <div className={styles.labels}>
             <Label name={texts.doneText} value={`${translation.done}%`} highlighted={false} />
             <Label name={texts.wordsToDoText} value={`${translation.wordsToDo}`} highlighted={true} />
