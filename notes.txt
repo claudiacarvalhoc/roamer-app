@@ -6,3 +6,7 @@
 
 
 - fazer testes unitarios de snapshot ao progress bar
+
+
+- summary / icons
+ - ler o array de icons e mapear cada string para o vector correctos

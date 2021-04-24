@@ -23,7 +23,7 @@ export const projectStub: ProjectProperties = {
     }, {
         Icon: 'book'
     }],
-    tags: [
+    badges: [
         'Roamer',
         'iOS',
     ],

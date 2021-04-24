@@ -8,6 +8,9 @@ import { connect } from 'react-redux';
 import ProgressBar from '../progressbar';
 import Label from '../label';
 import Icons from '../icons';
+import { InvalidatedProjectKind } from 'typescript';
+import Badge from '../badge';
+import { strict } from 'assert';
 
 
 export interface SummaryOwnProps {
@@ -21,6 +24,7 @@ export interface SummaryStateProps {
 type SummaryProps = SummaryOwnProps & SummaryStateProps;
 
 const Summary: FC<SummaryProps> = ({ project, texts }) => {
+    const hasBadges = project.badges.length > 0;
     return (
         <>
             <h1 className={styles.summaryTitle}>{project.name}</h1>
@@ -36,7 +40,12 @@ const Summary: FC<SummaryProps> = ({ project, texts }) => {
             <div className={styles.line}>
                 <Label name={texts.qaIssuesText} value={`${project.issues}`} highlighted={true} />
             </div>
-            <Icons className={styles.icons} />
+            <div className={styles.iconsLines}>
+                <Icons className={styles.icons} />
+            </div>
+            <div className={styles.badgesLine}>
+                {hasBadges && project.badges.map(b => <Badge className={styles.badge} name={b} />)}
+            </div>
         </>
     );
 };

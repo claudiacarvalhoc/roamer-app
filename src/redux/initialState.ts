@@ -38,7 +38,7 @@ export const projectInitialState: ProjectProperties = {
     }, {
         Icon: 'book'
     }],
-    tags: [
+    badges: [
         'Roamer',
         'iOS',
     ],

@@ -1,0 +1,16 @@
+.tag {
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 22px;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.orange {
+    background: #E78946;
+}
+
+.orange {
+    background: #40F362;
+}
