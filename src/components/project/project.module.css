@@ -11,5 +11,25 @@
 }
 
 .cards {
-
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 30px;
 }
+
+.card {
+    margin: 9px 30px 9px 0px;
+}
+
+.addcard {
+    margin: 10px 0px;
+    width: 120px;
+}
+
+/* Inserting this collapsed row between two flex items will make
+ * the flex item that comes after it break to a new row */
+ .break {
+    flex-basis: 100%;
+    height: 0;
+  }

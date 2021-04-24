@@ -19,6 +19,9 @@ export interface ProjectTextsProperties {
     teamText: string;
     keysText: string;
     qaIssuesText: string;
+    wordsToDoText: string;
+    unverifiedText: string;
+    addLanguageText: string;
 }
 
 export interface IconType {
@@ -26,7 +29,8 @@ export interface IconType {
 }
 
 export interface TranslationSectionsProperties {
-    country: string;
+    id: number;
+    country: 'uk' | 'it' | 'ru' | 'mk';
     language: string;
     done: number;
     wordsToDo: number;

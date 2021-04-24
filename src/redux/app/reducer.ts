@@ -21,11 +21,11 @@ const appInitialState: AppState = {
         teamText: 'TEAM',
         keysText: 'KEYS',
         qaIssuesText: 'QA ISSUES',
+        wordsToDoText: 'WORDS TO DO',
+        unverifiedText: 'UNVERIFIED',
+        addLanguageText: 'Add language',
     },
 };
-
-// wordsToDoText: 'WORDS TO DO',
-// unverifiedText: 'UNVERIFIED',
 
 export const appReducer = (
     state: AppState = appInitialState,

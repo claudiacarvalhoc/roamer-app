@@ -19,16 +19,16 @@ const Language: FC<LanguageProps> = ({ name, flag }) => (
 
 const getFlag = (flag: string) => {
     if (flag === 'uk') {
-        return <UnitedKingdomFlag key={`vector-{vector}`} className={styles.flag} />;
+        return <UnitedKingdomFlag key={`vector-${flag}`} className={styles.flag} />;
     }
     if (flag === 'it') {
-        return <ItalyFlag key={`vector-{vector}`} className={styles.flag} />;
+        return <ItalyFlag key={`vector-${flag}`} className={styles.flag} />;
     }
     if (flag === 'ru') {
-        return <RussiaFlag key={`vector-{vector}`} className={styles.flag} />;
+        return <RussiaFlag key={`vector-${flag}`} className={styles.flag} />;
     }
     if (flag === 'mk') {
-        return <MecedonianFlag key={`vector-{vector}`} className={styles.flag} />;
+        return <MecedonianFlag key={`vector-${flag}`} className={styles.flag} />;
     }
     return <></>;
 };

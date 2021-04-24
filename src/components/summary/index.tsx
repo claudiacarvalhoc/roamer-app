@@ -26,7 +26,7 @@ type SummaryProps = SummaryOwnProps & SummaryStateProps;
 const Summary: FC<SummaryProps> = ({ project, texts }) => {
     const hasBadges = project.badges.length > 0;
     return (
-        <>
+        <div className={styles.container}>
             <h1 className={styles.summaryTitle}>{project.name}</h1>
             <ProgressBar className={styles.progressBar} percentage={project.done} size={'small'} />
             <div className={styles.line}>
@@ -46,7 +46,7 @@ const Summary: FC<SummaryProps> = ({ project, texts }) => {
             <div className={styles.badgesLine}>
                 {hasBadges && project.badges.map(badge => <Badge className={styles.badge} name={badge.name} type={badge.type} />)}
             </div>
-        </>
+        </div>
     );
 };
 

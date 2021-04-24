@@ -1,3 +1,7 @@
+.container {
+    width: 160px;
+}
+
 .summaryTitle {
     font-size: 21px;
     line-height: 27px;
@@ -11,7 +15,6 @@
 }
 
 .line {
-    width: 160px;
     display: flex;
     justify-content: space-between;
 }
@@ -25,7 +28,6 @@
 }
 
 .badgesLine {
-    width: 160px;
     display: flex;
     justify-content: flex-start;
     margin-top: 14px;

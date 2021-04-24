@@ -3,14 +3,15 @@ import cn from 'classnames';
 import styles from './button.module.css';
 
 export interface ButtonProps {
+    className?: string;
     text: string;
     type: 'primary' | 'secondary';
     onClick: () => void;
 }
 
-const Button: FC<ButtonProps> = ({ text, type, onClick }) => (
+const Button: FC<ButtonProps> = ({ className, text, type, onClick }) => (
     <button
-        className={cn(styles.button, styles[type])}
+        className={cn(className, styles.button, styles[type])}
         onClick={onClick}>
         {text}
     </button>

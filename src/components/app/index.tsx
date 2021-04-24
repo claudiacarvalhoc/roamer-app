@@ -6,14 +6,13 @@ import Menu from '../menu';
 import Project from '../project';
 import { AppDispatch } from '../../redux/store';
 import { RootState } from '../../redux/reducers';
-import { isExpanded, projects } from '../../redux/app/selectors';
+import { projects } from '../../redux/app/selectors';
 
 export interface AppOwnProps {
 
 }
 
 export interface AppStateProps {
-  expand: boolean;
   projects: ProjectProperties[];
 }
 
@@ -30,7 +29,6 @@ const App: FC<AppProps> = ({ projects }) => {
 };
 
 const mapStateToProps = (state: RootState): AppStateProps => ({
-  expand: isExpanded(state),
   projects: projects(state),
 });
 

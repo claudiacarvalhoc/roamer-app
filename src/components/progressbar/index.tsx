@@ -39,13 +39,13 @@ const ProgressBar: FC<ProgressBarProps> = ({ className, percentage, size }) => {
 const getSize = (size: string) => size === 'medium' ? MEDIUM_SIZE : SMALL_SIZE;;
 
 const getColor = (percentage: number) => {
-    if (percentage > 0 && percentage < 20) {
+    if (percentage > 0 && percentage < 25) {
         return RED_HEX_CODE;
     }
-    if (percentage >= 20 && percentage < 60) {
+    if (percentage >= 20 && percentage < 70) {
         return YELLOW_HEX_CODE;
     }
-    if (percentage >= 60 && percentage <= 100) {
+    if (percentage >= 70 && percentage <= 100) {
         return BLUE_HEX_CODE;
     }
     return RED_HEX_CODE;
