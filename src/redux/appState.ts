@@ -42,6 +42,11 @@ export interface ProjectProperties {
     keys: number;
     issues: number;
     icons: string[];
-    badges: string[];
+    badges: Badge[];
     translationSections: TranslationSectionsProperties[];
+}
+
+export interface Badge {
+    name: string;
+    type: 'orange' | 'green';
 }

@@ -8,20 +8,18 @@ export interface LabelProps {
     highlighted: boolean,
 }
 
-const Label: FC<LabelProps> = ({ name, value, highlighted }) => {
-    return (
-        <div className={styles.label}>
-            <p className={styles.name}>
-                {name}
-            </p>
-            <p className={cn(styles.value,
-                {
-                    [styles.highlighted]: highlighted
-                })}>
-                {value}
-            </p>
-        </div >
-    );
-};
+const Label: FC<LabelProps> = ({ name, value, highlighted }) => (
+    <div className={styles.label}>
+        <p className={styles.name}>
+            {name}
+        </p>
+        <p className={cn(styles.value,
+            {
+                [styles.highlighted]: highlighted
+            })}>
+            {value}
+        </p>
+    </div >
+);
 
 export default Label;

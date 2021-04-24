@@ -10,8 +10,14 @@ export const projectStub: ProjectProperties = {
     issues: 47514,
     icons: ['up', 'down', 'check', 'user', 'rate', 'camera', 'book'],
     badges: [
-        'Roamer',
-        'iOS',
+        {
+            name: 'Roamer',
+            type: 'orange',
+        },
+        {
+            name: 'iOS',
+            type: 'green',
+        }
     ],
     translationSections: [{
         country: 'uk',

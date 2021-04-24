@@ -16,13 +16,11 @@ export interface IconsProps {
     vectors: string[];
 }
 
-const Icons: FC<IconsProps> = ({ className, vectors }) => {
-    return (
-        <div className={cn(className, styles.container)}>
-            {vectors.map(vector => get(vector))}
-        </div>
-    );
-};
+const Icons: FC<IconsProps> = ({ className, vectors }) => (
+    <div className={cn(className, styles.container)}>
+        {vectors.map(vector => get(vector))}
+    </div>
+);
 
 const get = (vector: string) => {
     if (vector === 'up') {

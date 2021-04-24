@@ -44,7 +44,7 @@ const Summary: FC<SummaryProps> = ({ project, texts }) => {
                 <Icons className={styles.icons} vectors={project.icons} />
             </div>
             <div className={styles.badgesLine}>
-                {hasBadges && project.badges.map(b => <Badge className={styles.badge} name={b} />)}
+                {hasBadges && project.badges.map(badge => <Badge className={styles.badge} name={badge.name} type={badge.type} />)}
             </div>
         </>
     );
