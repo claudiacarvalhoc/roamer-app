@@ -24,25 +24,25 @@ const Icons: FC<IconsProps> = ({ className, vectors }) => (
 
 const get = (vector: string) => {
     if (vector === 'up') {
-        return <UpVector key={`vector-{vector}`} className={styles.icon} />;
+        return <UpVector key={`vector-${vector}`} className={styles.icon} />;
     }
     if (vector === 'down') {
-        return <UpVector key={`vector-{vector}`} className={styles.icon} />;
+        return <DownVector key={`vector-${vector}`} className={styles.icon} />;
     }
     if (vector === 'check') {
-        return <CheckVector key={`vector-{vector}`} className={styles.icon} />;
+        return <CheckVector key={`vector-${vector}`} className={styles.icon} />;
     }
     if (vector === 'user') {
-        return <ProfileVector key={`vector-{vector}`} className={styles.icon} />;
+        return <ProfileVector key={`vector-${vector}`} className={styles.icon} />;
     }
     if (vector === 'rate') {
-        return <RateVector key={`vector-{vector}`} className={styles.icon} />;
+        return <RateVector key={`vector-${vector}`} className={styles.icon} />;
     }
     if (vector === 'camera') {
-        return <CameraVector key={`vector-{vector}`} className={styles.icon} />;
+        return <CameraVector key={`vector-${vector}`} className={styles.icon} />;
     }
     if (vector === 'book') {
-        return <BookVector key={`vector-{vector}`} className={styles.icon} />;
+        return <BookVector key={`vector-${vector}`} className={styles.icon} />;
     }
     return <></>;
 };

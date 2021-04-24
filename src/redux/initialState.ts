@@ -1,12 +1,12 @@
-import { AppState, MenuTexts, ProjectProperties, ProjectTextsProperties } from "./appState";
+import { AppState, MenuTextsState, ProjectState, ProjectTextsState } from "./appState";
 
-export const menuInitialState: MenuTexts = {
+export const menuInitialState: MenuTextsState = {
     projectText: 'New project ⇧⌘P',
     expandText: 'Expand all',
     collapseText: 'Collapse all',
 };
 
-export const projectsInitialState: ProjectTextsProperties = {
+export const projectsInitialState: ProjectTextsState = {
     doneText: 'DONE',
     baseWordsText: 'BASE WORDS',
     teamText: 'TEAM',
@@ -17,7 +17,7 @@ export const projectsInitialState: ProjectTextsProperties = {
     addLanguageText: 'Add language',
 };
 
-export const projectInitialState: ProjectProperties = {
+export const projectInitialState: ProjectState = {
     id: 1,
     name: 'Roamer App (Android SDK test)',
     done: 30,
@@ -150,11 +150,11 @@ export const appInitialState: AppState = {
         projectInitialState,
         projectInitialState
     ],
-    menuTexts: menuInitialState,
+    MenuTextsState: menuInitialState,
     projectTexts: projectsInitialState,
 };
 
-export const newProjectInitialState: ProjectProperties = {
+export const newProjectInitialState: ProjectState = {
     id: 0,
     name: 'Roamer App (Android SDK test)',
     done: 0,

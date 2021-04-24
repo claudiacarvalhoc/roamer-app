@@ -1,24 +1,20 @@
 import React, { FC } from 'react';
-import { ProjectProperties, ProjectTextsProperties } from '../../redux/appState';
+import { ProjectState, ProjectTextsState } from '../../redux/appState';
 import { RootState } from '../../redux/reducers';
-// import cn from 'classnames';
 import styles from './summary.module.css';
 import { projectTexts } from '../../redux/app/selectors';
 import { connect } from 'react-redux';
 import ProgressBar from '../progressbar';
 import Label from '../label';
 import Icons from '../icons';
-import { InvalidatedProjectKind } from 'typescript';
 import Badge from '../badge';
-import { strict } from 'assert';
-
 
 export interface SummaryOwnProps {
-    project: ProjectProperties;
+    project: ProjectState;
 }
 
 export interface SummaryStateProps {
-    texts: ProjectTextsProperties;
+    texts: ProjectTextsState;
 }
 
 type SummaryProps = SummaryOwnProps & SummaryStateProps;

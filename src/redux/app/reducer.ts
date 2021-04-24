@@ -8,7 +8,7 @@ const appInitialState: AppState = {
     projects: [
         projectStub
     ],
-    menuTexts: {
+    MenuTextsState: {
         projectText: 'New project ⇧⌘P',
         expandText: 'Expand all',
         collapseText: 'Collapse all',

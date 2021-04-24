@@ -1,12 +1,10 @@
 import React, { FC } from 'react';
-import { ProjectProperties } from '../../redux/appState';
+import { ProjectState } from '../../redux/appState';
 import Summary from '../summary';
 import cn from 'classnames';
 import styles from './project.module.css';
-import Language from '../language';
 import Divider from '../divider';
 import Card from '../card';
-import { StringLiteral } from 'typescript';
 import { RootState } from '../../redux/reducers';
 import { connect } from 'react-redux';
 import { isExpanded, projectTexts } from '../../redux/app/selectors';
@@ -14,7 +12,7 @@ import Button from '../button';
 
 export interface ProjectOwnProps {
     className: string;
-    project: ProjectProperties;
+    project: ProjectState;
 }
 
 export interface ProjectStateProps {

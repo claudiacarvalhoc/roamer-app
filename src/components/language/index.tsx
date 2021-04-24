@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import cn from 'classnames';
 import styles from './language.module.css';
 import { UnitedKingdomFlag, ItalyFlag, RussiaFlag, MecedonianFlag } from './flags';
 

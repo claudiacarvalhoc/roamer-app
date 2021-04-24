@@ -1,6 +1,6 @@
-import { ProjectProperties } from "../redux/appState";
+import { ProjectState } from "../redux/appState";
 
-export const projectStub: ProjectProperties = {
+export const projectStub: ProjectState = {
     id: 1,
     name: 'Roamer App (Android SDK test)',
     done: 30,

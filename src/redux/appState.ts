@@ -2,18 +2,18 @@ import { DefaultRootState } from "react-redux";
 
 export interface AppState extends DefaultRootState {
     expand: boolean;
-    projects: ProjectProperties[];
-    menuTexts: MenuTexts,
-    projectTexts: ProjectTextsProperties,
+    projects: ProjectState[];
+    MenuTextsState: MenuTextsState,
+    projectTexts: ProjectTextsState,
 }
 
-export interface MenuTexts {
+export interface MenuTextsState {
     projectText: string;
     expandText: string;
     collapseText: string;
 }
 
-export interface ProjectTextsProperties {
+export interface ProjectTextsState {
     doneText: string;
     baseWordsText: string;
     teamText: string;
@@ -24,11 +24,7 @@ export interface ProjectTextsProperties {
     addLanguageText: string;
 }
 
-export interface IconType {
-    Icon: 'up' | 'down' | 'check' | 'user' | 'rate' | 'camera' | 'book';
-}
-
-export interface TranslationSectionsProperties {
+export interface TranslationState {
     id: number;
     country: 'uk' | 'it' | 'ru' | 'mk';
     language: string;
@@ -37,7 +33,7 @@ export interface TranslationSectionsProperties {
     unverified: number;
 }
 
-export interface ProjectProperties {
+export interface ProjectState {
     id: number;
     name: string;
     done: number;
@@ -47,7 +43,7 @@ export interface ProjectProperties {
     issues: number;
     icons: string[];
     badges: Badge[];
-    translationSections: TranslationSectionsProperties[];
+    translationSections: TranslationState[];
 }
 
 export interface Badge {

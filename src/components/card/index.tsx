@@ -2,21 +2,20 @@ import React, { FC } from 'react';
 import cn from 'classnames';
 import styles from './card.module.css';
 import { projectTexts } from '../../redux/app/selectors';
-import { ProjectProperties, ProjectTextsProperties, TranslationSectionsProperties } from '../../redux/appState';
+import { ProjectTextsState, TranslationState } from '../../redux/appState';
 import { RootState } from '../../redux/reducers';
 import { connect } from 'react-redux';
 import Language from '../language';
 import ProgressBar from '../progressbar';
 import Label from '../label';
-import { SpawnSyncOptionsWithStringEncoding } from 'child_process';
 
 export interface CardOwnProps {
     className: string;
-    translation: TranslationSectionsProperties;
+    translation: TranslationState;
 }
 
 export interface CardStateProps {
-    texts: ProjectTextsProperties;
+    texts: ProjectTextsState;
 }
 
 export type CardProps = CardOwnProps & CardStateProps;

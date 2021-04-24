@@ -6,31 +6,31 @@ exports[`<Icons /> render correctly 1`] = `
 >
   <UpVector
     className="icon"
-    key="vector-{vector}"
+    key="vector-up"
   />
-  <UpVector
+  <DownVector
     className="icon"
-    key="vector-{vector}"
+    key="vector-down"
   />
   <CheckVector
     className="icon"
-    key="vector-{vector}"
+    key="vector-check"
   />
   <ProfileVector
     className="icon"
-    key="vector-{vector}"
+    key="vector-user"
   />
   <RateVector
     className="icon"
-    key="vector-{vector}"
+    key="vector-rate"
   />
   <CameraVector
     className="icon"
-    key="vector-{vector}"
+    key="vector-camera"
   />
   <BookVector
     className="icon"
-    key="vector-{vector}"
+    key="vector-book"
   />
 </div>
 `;
