@@ -41,7 +41,7 @@ export interface ProjectProperties {
     team: number;
     keys: number;
     issues: number;
-    icons: IconType[];
+    icons: string[];
     badges: string[];
     translationSections: TranslationSectionsProperties[];
 }

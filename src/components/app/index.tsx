@@ -20,10 +20,7 @@ export interface AppStateProps {
 export type AppProps = AppOwnProps & AppStateProps;
 
 const App: FC<AppProps> = ({ projects }) => {
-  console.log('render app');
   const isEmpty = projects.length === 0;
-  console.log({ isEmpty, projects });
-
   return (
     <div className={styles.app}>
       <Menu />

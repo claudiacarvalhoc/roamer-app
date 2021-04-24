@@ -13,20 +13,40 @@ import {
 
 export interface IconsProps {
     className: string;
+    vectors: string[];
 }
 
-const Icons: FC<IconsProps> = ({ className }) => {
+const Icons: FC<IconsProps> = ({ className, vectors }) => {
     return (
         <div className={cn(className, styles.container)}>
-            <UpVector className={styles.icon} />
-            <DownVector className={styles.icon} />
-            <CheckVector className={styles.icon} />
-            <ProfileVector className={styles.icon} />
-            <RateVector className={styles.icon} />
-            <CameraVector className={styles.icon} />
-            <BookVector className={styles.icon} />
+            {vectors.map(vector => get(vector))}
         </div>
     );
+};
+
+const get = (vector: string) => {
+    if (vector === 'up') {
+        return <UpVector key={`vector-{vector}`} className={styles.icon} />;
+    }
+    if (vector === 'down') {
+        return <UpVector key={`vector-{vector}`} className={styles.icon} />;
+    }
+    if (vector === 'check') {
+        return <CheckVector key={`vector-{vector}`} className={styles.icon} />;
+    }
+    if (vector === 'user') {
+        return <ProfileVector key={`vector-{vector}`} className={styles.icon} />;
+    }
+    if (vector === 'rate') {
+        return <RateVector key={`vector-{vector}`} className={styles.icon} />;
+    }
+    if (vector === 'camera') {
+        return <CameraVector key={`vector-{vector}`} className={styles.icon} />;
+    }
+    if (vector === 'book') {
+        return <BookVector key={`vector-{vector}`} className={styles.icon} />;
+    }
+    return <></>;
 };
 
 export default Icons;

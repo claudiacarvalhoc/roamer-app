@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Label /> render correctly 1`] = `
+<div
+  className="test container"
+>
+  <UpVector
+    className="icon"
+    key="vector-{vector}"
+  />
+  <UpVector
+    className="icon"
+    key="vector-{vector}"
+  />
+  <CheckVector
+    className="icon"
+    key="vector-{vector}"
+  />
+  <ProfileVector
+    className="icon"
+    key="vector-{vector}"
+  />
+  <RateVector
+    className="icon"
+    key="vector-{vector}"
+  />
+  <CameraVector
+    className="icon"
+    key="vector-{vector}"
+  />
+  <BookVector
+    className="icon"
+    key="vector-{vector}"
+  />
+</div>
+`;

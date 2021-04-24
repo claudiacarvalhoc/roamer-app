@@ -41,7 +41,7 @@ const Summary: FC<SummaryProps> = ({ project, texts }) => {
                 <Label name={texts.qaIssuesText} value={`${project.issues}`} highlighted={true} />
             </div>
             <div className={styles.iconsLines}>
-                <Icons className={styles.icons} />
+                <Icons className={styles.icons} vectors={project.icons} />
             </div>
             <div className={styles.badgesLine}>
                 {hasBadges && project.badges.map(b => <Badge className={styles.badge} name={b} />)}

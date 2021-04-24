@@ -23,21 +23,7 @@ export const projectInitialState: ProjectProperties = {
     team: 26,
     keys: 1834,
     issues: 47514,
-    icons: [{
-        Icon: 'up'
-    }, {
-        Icon: 'down'
-    }, {
-        Icon: 'check'
-    }, {
-        Icon: 'user'
-    }, {
-        Icon: 'rate'
-    }, {
-        Icon: 'camera'
-    }, {
-        Icon: 'book'
-    }],
+    icons: ['up', 'down', 'check', 'user', 'rate', 'camera', 'book'],
     badges: [
         'Roamer',
         'iOS',
