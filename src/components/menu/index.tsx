@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './styles.css';
+import styles from './menu.module.css';
 import Button from '../button';
 import { menuTexts } from '../../redux/app/selectors';
 import { RootState } from '../../redux/reducers';
@@ -35,7 +35,7 @@ const Menu: FC<MenuProps> = ({
     collapse,
 }) => {
     return (
-        <div className="menu">
+        <div className={styles.menu}>
             <Button
                 data-test="button-new-project"
                 text={projectText}

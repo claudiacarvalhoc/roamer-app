@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> render correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Card)
+    className="test"
+    texts={
+      Object {
+        "addLanguageText": "Add language",
+        "baseWordsText": "BASE WORDS",
+        "doneText": "DONE",
+        "keysText": "KEYS",
+        "qaIssuesText": "QA ISSUES",
+        "teamText": "TEAM",
+        "unverifiedText": "UNVERIFIED",
+        "wordsToDoText": "WORDS TO DO",
+      }
+    }
+    translation={
+      Object {
+        "country": "uk",
+        "done": 10,
+        "id": 1,
+        "language": "English",
+        "unverified": 30000,
+        "wordsToDo": 50000,
+      }
+    }
+  >
+    <Card
+      className="test"
+      dispatch={[Function]}
+      texts={
+        Object {
+          "addLanguageText": "Add language",
+          "baseWordsText": "BASE WORDS",
+          "doneText": "DONE",
+          "keysText": "KEYS",
+          "qaIssuesText": "QA ISSUES",
+          "teamText": "TEAM",
+          "unverifiedText": "UNVERIFIED",
+          "wordsToDoText": "WORDS TO DO",
+        }
+      }
+      translation={
+        Object {
+          "country": "uk",
+          "done": 10,
+          "id": 1,
+          "language": "English",
+          "unverified": 30000,
+          "wordsToDo": 50000,
+        }
+      }
+    >
+      <div
+        className="test container"
+      >
+        <Language
+          flag="uk"
+          name="English"
+        >
+          <div
+            className="container"
+          >
+            <UnitedKingdomFlag
+              className="flag"
+              key="vector-uk"
+            >
+              <svg
+                className="flag"
+                fill="none"
+                height="10"
+                viewBox="0 0 14 10"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  fill="white"
+                  height="10"
+                  rx="1"
+                  width="14"
+                />
+                <mask
+                  height="10"
+                  id="mask0"
+                  mask-type="alpha"
+                  maskUnits="userSpaceOnUse"
+                  width="14"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="white"
+                    height="10"
+                    rx="1"
+                    width="14"
+                  />
+                </mask>
+                <g
+                  mask="url(#mask0)"
+                >
+                  <rect
+                    fill="#0A17A7"
+                    height="10"
+                    width="14"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M-0.640625 -0.958496L5.33333 3.07099V-0.666992H8.66667V3.07161L14.6413 -0.958361L15.3869 0.147022L10.6635 3.33301H14V6.66634H10.6637L15.3874 9.85257L14.6418 10.958L8.66667 6.92764V10.6663H5.33333V6.92826L-0.641128 10.9581L-1.38672 9.8527L3.33726 6.66634H0V3.33301H3.3374L-1.38622 0.146887L-0.640625 -0.958496Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    d="M9.33333 3.1661L15.666 -1"
+                    stroke="#DB1F35"
+                    stroke-linecap="round"
+                    stroke-width="0.666667"
+                  />
+                  <path
+                    d="M10.0065 6.84871L15.6834 10.6751"
+                    stroke="#DB1F35"
+                    stroke-linecap="round"
+                    stroke-width="0.666667"
+                  />
+                  <path
+                    d="M4.6445 6.80232L-1.91927 11.1551"
+                    stroke="#DB1F35"
+                    stroke-linecap="round"
+                    stroke-width="0.666667"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M0 6H6V10H8V6H14V4H8V0H6V4H0V6Z"
+                    fill="#E6273E"
+                    fill-rule="evenodd"
+                  />
+                </g>
+              </svg>
+            </UnitedKingdomFlag>
+            <p
+              className="language"
+            >
+              English
+            </p>
+          </div>
+        </Language>
+        <ProgressBar
+          className="progressBar"
+          percentage={10}
+        >
+          <div
+            className="progressBar"
+          >
+            <div
+              style={
+                Object {
+                  "border": "2px solid #CFCFCF",
+                  "height": 0,
+                  "width": "100%",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "border": "2px solid #DB1F35",
+                    "margin-left": "-2px",
+                    "margin-top": "-2px",
+                    "width": "10%",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </ProgressBar>
+        <div
+          className="labels"
+        >
+          <Label
+            highlighted={false}
+            name="DONE"
+            value="10%"
+          >
+            <div
+              className="label"
+            >
+              <p
+                className="name"
+              >
+                DONE
+              </p>
+              <p
+                className="value"
+              >
+                10%
+              </p>
+            </div>
+          </Label>
+          <Label
+            highlighted={true}
+            name="WORDS TO DO"
+            value="50000"
+          >
+            <div
+              className="label"
+            >
+              <p
+                className="name"
+              >
+                WORDS TO DO
+              </p>
+              <p
+                className="value highlighted"
+              >
+                50000
+              </p>
+            </div>
+          </Label>
+          <Label
+            highlighted={true}
+            name="UNVERIFIED"
+            value="30000"
+          >
+            <div
+              className="label"
+            >
+              <p
+                className="name"
+              >
+                UNVERIFIED
+              </p>
+              <p
+                className="value highlighted"
+              >
+                30000
+              </p>
+            </div>
+          </Label>
+        </div>
+      </div>
+    </Card>
+  </Connect(Card)>
+</Provider>
+`;

@@ -15,20 +15,6 @@ export const UnitedKingdomFlag = ({ className }) => {
     </svg>)
 };
 
-
-/**
- *
- * @param param0 (<svg className={className} width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="-3" width="14" height="10">
-            <rect x="0.25" y="-2.75" width="13.5" height="9.5" rx="0.75" fill="white" stroke="white" stroke-width="0.5" />
-        </mask>
-        <g mask="url(#mask0)">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.66666H14V0.333328H0V3.66666Z" fill="#0C47B7" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.99967H14V3.66634H0V6.99967Z" fill="#E53B35" />
-        </g>
-    </svg>)
- */
-
 export const RussiaFlag = ({ className }) => {
     return (<svg className={className} width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="-3" width="14" height="10">
