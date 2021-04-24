@@ -6,7 +6,7 @@ exports[`<Language /> render correctly when flag is it 1`] = `
 >
   <ItalyFlag
     className="flag"
-    key="vector-{vector}"
+    key="vector-it"
   />
   <p
     className="language"
@@ -22,7 +22,7 @@ exports[`<Language /> render correctly when flag is mk 1`] = `
 >
   <MecedonianFlag
     className="flag"
-    key="vector-{vector}"
+    key="vector-mk"
   />
   <p
     className="language"
@@ -38,7 +38,7 @@ exports[`<Language /> render correctly when flag is ru 1`] = `
 >
   <RussiaFlag
     className="flag"
-    key="vector-{vector}"
+    key="vector-ru"
   />
   <p
     className="language"
@@ -54,7 +54,7 @@ exports[`<Language /> render correctly when flag is uk 1`] = `
 >
   <UnitedKingdomFlag
     className="flag"
-    key="vector-{vector}"
+    key="vector-uk"
   />
   <p
     className="language"
