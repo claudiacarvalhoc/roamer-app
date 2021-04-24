@@ -3,17 +3,13 @@ import { DefaultRootState } from "react-redux";
 export interface AppState extends DefaultRootState {
     expand: boolean;
     projects: ProjectProperties[];
+    menuTexts: MenuTexts
 }
 
 export interface MenuTexts {
     projectText: string;
     expandText: string;
     collapseText: string;
-}
-
-export interface MenuState {
-    texts: MenuTexts;
-    expand: boolean;
 }
 
 export interface ProjectTextsProperties {

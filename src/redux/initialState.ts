@@ -1,12 +1,9 @@
-import { AppState, MenuState, ProjectsProperties } from "./appState";
+import { AppState, MenuTexts, ProjectsProperties } from "./appState";
 
-export const menuInitialState: MenuState = {
-    texts: {
-        projectText: 'New project ⇧⌘P',
-        expandText: 'Expand all',
-        collapseText: 'Collapse all',
-    },
-    expand: false,
+export const menuInitialState: MenuTexts = {
+    projectText: 'New project ⇧⌘P',
+    expandText: 'Expand all',
+    collapseText: 'Collapse all',
 };
 
 export const projectsInitialState: ProjectsProperties = {
@@ -23,4 +20,5 @@ export const projectsInitialState: ProjectsProperties = {
 export const appInitialState: AppState = {
     expand: true,
     projects: [],
+    menuTexts: menuInitialState,
 };
