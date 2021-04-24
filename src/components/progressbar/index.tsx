@@ -7,31 +7,22 @@ export interface ProgressBarProps {
     size: 'medium' | 'small';
 }
 
+const RED_HEX_CODE = '#DB1F35';
+const YELLOW_HEX_CODE = '#FFC400';
+const BLUE_HEX_CODE = '#5489DC';
+
+const SMALL_SIZE = 160;
+const MEDIUM_SIZE = 205;
+
 const ProgressBar: FC<ProgressBarProps> = ({ className, percentage, size }) => {
-    let width = 160;
-    if (size === 'small') {
-        width = 160;
-    } else if (size === 'medium') {
-        width = 205;
-    }
     const containerStyle = {
         height: 0,
-        width: `${width}px`,
+        width: `${getSize(size)}px`,
         'border': '2px solid #CFCFCF',
     };
-
-    let bgcolor = "#DB1F35";
-    if (percentage < 20) {
-        bgcolor = '#DB1F35'; // red
-    } else if (percentage < 40) {
-        bgcolor = '#FFC400'; // yellow
-    } else if (percentage > 80) {
-        bgcolor = '#5489DC'; // blue
-    }
-
     const progressStyle = {
         width: `${percentage}%`,
-        'border': `2px solid ${bgcolor}`,
+        'border': `2px solid ${getColor(percentage)}`,
         'margin-top': '-2px',
         'margin-left': '-2px',
     };
@@ -44,5 +35,20 @@ const ProgressBar: FC<ProgressBarProps> = ({ className, percentage, size }) => {
         </div>
     );
 };
+
+const getSize = (size: string) => size === 'medium' ? MEDIUM_SIZE : SMALL_SIZE;;
+
+const getColor = (percentage: number) => {
+    if (percentage > 0 && percentage < 20) {
+        return RED_HEX_CODE;
+    }
+    if (percentage >= 20 && percentage < 60) {
+        return YELLOW_HEX_CODE;
+    }
+    if (percentage >= 60 && percentage <= 100) {
+        return BLUE_HEX_CODE;
+    }
+    return RED_HEX_CODE;
+}
 
 export default ProgressBar;
