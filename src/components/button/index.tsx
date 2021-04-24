@@ -16,7 +16,7 @@ const Button: FC<ButtonProperties> = props => {
     } = props;
 
     return (
-        <button className={cn(styles.button, styles[type])} {...type} onClick={onClick}>{text}</button>
+        <button className={cn(styles.button, styles[type])} onClick={onClick}>{text}</button>
     );
 };
 

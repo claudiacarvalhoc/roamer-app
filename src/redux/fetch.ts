@@ -1,16 +1,25 @@
 import { AppDispatch } from './store';
-import { initialSetup, fetchProjects } from '../api';
 import { projectsLoadSuccess } from './app/actions';
 import { ProjectProperties } from './appState';
+import { addProject, getProjects, resetStorage } from "../storage";
+import { projectStub } from "../stubs/project";
 
 
-export const getProjects = (): ((dispatch: AppDispatch) => Promise<void>) => {
+export const fecthProjects = (): ((dispatch: AppDispatch) => Promise<void>) => {
     return dispatch => {
-        initialSetup();
-        const projects: ProjectProperties[] = fetchProjects();
-
+        resetStorage();
+        addProject(projectStub);
+        const projects: ProjectProperties[] = getProjects();
         dispatch(projectsLoadSuccess(projects));
+        return Promise.resolve();
+    };
+};
 
+export const createProject = (): ((dispatch: AppDispatch) => Promise<void>) => {
+    return dispatch => {
+        addProject(projectStub);
+        const projects: ProjectProperties[] = getProjects();
+        dispatch(projectsLoadSuccess(projects));
         return Promise.resolve();
     };
 };

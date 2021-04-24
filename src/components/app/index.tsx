@@ -4,7 +4,7 @@ import { ProjectProperties } from '../../redux/appState';
 import './styles.css';
 import Menu from '../menu';
 import Project from '../project';
-import { getProjects } from '../../redux/fetch';
+import { fecthProjects } from '../../redux/fetch';
 import { AppDispatch } from '../../redux/store';
 import { RootState } from '../../redux/reducers';
 import { isExpanded, projects } from '../../redux/app/selectors';
@@ -26,7 +26,6 @@ export type AppProps = AppOwnProps & AppStateProps & AppDispatchProps;
 
 const App: FC<AppProps> = ({ fetchProjects }) => {
   useEffect(() => {
-    console.log('invoke getProjectsAsync');
     fetchProjects();
   }, []);
 
@@ -47,7 +46,7 @@ const mapStateToProps = (state: RootState): AppStateProps => ({
 const mapDispatchToProps = (
   dispatch: AppDispatch
 ): AppDispatchProps => ({
-  fetchProjects: () => dispatch(getProjects())
+  fetchProjects: () => dispatch(fecthProjects())
 });
 
 export default connect<AppStateProps, AppDispatchProps>(

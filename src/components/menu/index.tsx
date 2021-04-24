@@ -6,6 +6,7 @@ import { RootState } from '../../redux/reducers';
 import { connect } from 'react-redux';
 import { AppDispatch } from '../../redux/store';
 import { expandProjectsAction, collapseProjectAction } from '../../redux/app/actions';
+import { createProject } from '../../redux/fetch';
 
 export interface MenuOwnProps {
 
@@ -42,11 +43,13 @@ const Menu: FC<MenuProps> = ({
                 type='primary'
             />
             <Button
+                data-test="button-expand"
                 text={expandText}
                 onClick={() => expand()}
                 type='secondary'
             />
             <Button
+                data-test="button-collapse"
                 text={collapseText}
                 onClick={() => collapse()}
                 type='secondary'
@@ -67,7 +70,7 @@ const mapStateToProps = (state: RootState): MenuStateProps => {
 const mapDispatchToProps = (
     dispatch: AppDispatch
 ): MenuDispatchProps => ({
-    addProject: () => console.log('dispatch > addProject'),
+    addProject: () => dispatch(createProject()),
     expand: () => dispatch(expandProjectsAction()),
     collapse: () => dispatch(collapseProjectAction()),
 });
