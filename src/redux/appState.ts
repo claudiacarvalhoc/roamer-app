@@ -3,7 +3,8 @@ import { DefaultRootState } from "react-redux";
 export interface AppState extends DefaultRootState {
     expand: boolean;
     projects: ProjectProperties[];
-    menuTexts: MenuTexts
+    menuTexts: MenuTexts,
+    projectTexts: ProjectTextsProperties,
 }
 
 export interface MenuTexts {
@@ -33,6 +34,7 @@ export interface TranslationSectionsProperties {
 }
 
 export interface ProjectProperties {
+    id: number;
     name: string;
     done: number;
     baseWords: number;
@@ -43,9 +45,3 @@ export interface ProjectProperties {
     tags: string[];
     translationSections: TranslationSectionsProperties[];
 }
-
-export interface ProjectsProperties {
-    texts: ProjectTextsProperties;
-    projects: ProjectProperties[];
-}
-

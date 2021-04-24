@@ -1,6 +1,7 @@
 import { ProjectProperties } from "../redux/appState";
 
 export const projectStub: ProjectProperties = {
+    id: 1,
     name: 'Roamer App (Android SDK test)',
     done: 30,
     baseWords: 160246,

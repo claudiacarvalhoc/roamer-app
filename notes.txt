@@ -1,0 +1,8 @@
+- css files can be renamed to styles.css ?
+
+
+- nao estou a usar o storage.js
+- deverei ajustar o comportamento da app? ou remover?
+
+
+- fazer testes unitarios de snapshot ao progress bar

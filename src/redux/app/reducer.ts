@@ -3,16 +3,29 @@ import { Reducer, combineReducers } from 'redux';
 import { AppActions } from './actions';
 import { PROJECT_LOAD_SUCCESS, EXPAND_PROJECTS, COLLAPSE_PROJECTS } from "../types";
 import { AppState } from '../appState';
+import { projectStub } from '../../stubs/project';
 
 const appInitialState: AppState = {
     expand: true,
-    projects: [],
+    projects: [
+        projectStub
+    ],
     menuTexts: {
         projectText: 'New project ⇧⌘P',
         expandText: 'Expand all',
         collapseText: 'Collapse all',
     },
+    projectTexts: {
+        doneText: 'DONE',
+        baseWordsText: 'BASE WORDS',
+        teamText: 'TEAM',
+        keysText: 'KEYS',
+        qaIssuesText: 'QA ISSUES',
+    },
 };
+
+// wordsToDoText: 'WORDS TO DO',
+// unverifiedText: 'UNVERIFIED',
 
 export const appReducer = (
     state: AppState = appInitialState,

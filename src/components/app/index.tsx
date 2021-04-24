@@ -1,10 +1,9 @@
 import React, { FC, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { ProjectProperties } from '../../redux/appState';
-import './styles.css';
+import styles from './app.module.css';
 import Menu from '../menu';
 import Project from '../project';
-import { fecthProjects } from '../../redux/fetch';
 import { AppDispatch } from '../../redux/store';
 import { RootState } from '../../redux/reducers';
 import { isExpanded, projects } from '../../redux/app/selectors';
@@ -18,22 +17,17 @@ export interface AppStateProps {
   projects: ProjectProperties[];
 }
 
-export interface AppDispatchProps {
-  fetchProjects: () => void;
-}
+export type AppProps = AppOwnProps & AppStateProps;
 
-export type AppProps = AppOwnProps & AppStateProps & AppDispatchProps;
-
-const App: FC<AppProps> = ({ fetchProjects }) => {
-  useEffect(() => {
-    fetchProjects();
-  }, []);
-
+const App: FC<AppProps> = ({ projects }) => {
+  console.log('render app');
+  const isEmpty = projects.length === 0;
+  console.log({ isEmpty, projects });
 
   return (
-    <div className="App">
+    <div className={styles.app}>
       <Menu />
-      <Project />
+      {!isEmpty && projects.map(project => <Project project={project} />)}
     </div>
   );
 };
@@ -43,13 +37,6 @@ const mapStateToProps = (state: RootState): AppStateProps => ({
   projects: projects(state),
 });
 
-const mapDispatchToProps = (
-  dispatch: AppDispatch
-): AppDispatchProps => ({
-  fetchProjects: () => dispatch(fecthProjects())
-});
-
-export default connect<AppStateProps, AppDispatchProps>(
+export default connect<AppStateProps>(
   mapStateToProps,
-  mapDispatchToProps
 )(App);
