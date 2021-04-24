@@ -12,8 +12,5 @@ exports[`<Button /> render correctly with primary type 1`] = `
 exports[`<Button /> render correctly with secondary type 1`] = `
 <button
   className="button secondary"
-  onClick={[MockFunction]}
->
-  Button name
-</button>
+/>
 `;
