@@ -5,3 +5,13 @@
     letter-spacing: -0.01em;
     color: #5489DC;
 }
+
+.progressBar {
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+}
