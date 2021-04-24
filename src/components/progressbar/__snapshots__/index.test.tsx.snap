@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBar /> render correctly with medium size 1`] = `
+<div
+  className="test"
+>
+  <div
+    style={
+      Object {
+        "border": "2px solid #CFCFCF",
+        "height": 0,
+        "width": "205px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "border": "2px solid #5489DC",
+          "margin-left": "-2px",
+          "margin-top": "-2px",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> render correctly with percentage greater then 80 1`] = `
+<div
+  className="test"
+>
+  <div
+    style={
+      Object {
+        "border": "2px solid #CFCFCF",
+        "height": 0,
+        "width": "205px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "border": "2px solid #5489DC",
+          "margin-left": "-2px",
+          "margin-top": "-2px",
+          "width": "90%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> render correctly with percentage lower then 20 1`] = `
+<div
+  className="test"
+>
+  <div
+    style={
+      Object {
+        "border": "2px solid #CFCFCF",
+        "height": 0,
+        "width": "160px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "border": "2px solid #DB1F35",
+          "margin-left": "-2px",
+          "margin-top": "-2px",
+          "width": "10%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> render correctly with percentage lower then 40 1`] = `
+<div
+  className="test"
+>
+  <div
+    style={
+      Object {
+        "border": "2px solid #CFCFCF",
+        "height": 0,
+        "width": "205px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "border": "2px solid #FFC400",
+          "margin-left": "-2px",
+          "margin-top": "-2px",
+          "width": "35%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`<ProgressBar /> render correctly with small size 1`] = `
+<div
+  className="test"
+>
+  <div
+    style={
+      Object {
+        "border": "2px solid #CFCFCF",
+        "height": 0,
+        "width": "160px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "border": "2px solid #5489DC",
+          "margin-left": "-2px",
+          "margin-top": "-2px",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;

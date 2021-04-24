@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import cn from 'classnames';
 
-export interface ProgressbarProps {
+export interface ProgressBarProps {
     className: string;
     percentage: number,
     size: 'medium' | 'small';
 }
 
-const ProgressBar: FC<ProgressbarProps> = ({ className, percentage, size }) => {
+const ProgressBar: FC<ProgressBarProps> = ({ className, percentage, size }) => {
     let width = 160;
     if (size === 'small') {
         width = 160;
