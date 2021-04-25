@@ -11,6 +11,9 @@
 }
 
 @media (max-width: 480px) {
+    .menu {
+        display: block;
+    }
     .menu > button {
         margin-top: 15px;
         margin-bottom: 5px;

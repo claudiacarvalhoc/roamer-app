@@ -1,10 +1,34 @@
-import { AppState, MenuTextsState, ProjectState, ProjectTextsState } from "./appState";
+import { AppState, MenuTextsState, ProjectState, ProjectTextsState, LanguageState } from "./appState";
 
 export const menuInitialState: MenuTextsState = {
     projectText: 'New project ⇧⌘P',
     expandText: 'Expand all',
     collapseText: 'Collapse all',
 };
+
+const languagesInitialState: LanguageState[] = [
+    { value: 'ru', label: 'Russian' },
+    { value: 'de', label: 'German' },
+    { value: 'uk', label: 'English' },
+    { value: 'fr', label: 'French' },
+    { value: 'it', label: 'Italian' },
+    { value: 'es', label: 'Spanish' },
+    { value: 'ua', label: 'Ukrainian' },
+    { value: 'pl', label: 'Poland' },
+    { value: 'ro', label: 'Polish' },
+    { value: 'nl', label: 'Dutch' },
+    { value: 'cz', label: 'Czech' },
+    { value: 'gr', label: 'Greek' },
+    { value: 'pt', label: 'Portuguese' },
+    { value: 'se', label: 'Swedish' },
+    { value: 'bu', label: 'Hungarian' },
+    { value: 'by', label: 'Belarusian' },
+    { value: 'rs', label: 'Serbian' },
+    { value: 'bg', label: 'Bulgarian' },
+    { value: 'dk', label: 'Danish' },
+    { value: 'fi', label: 'Finnish' },
+    { value: 'mk', label: 'Macedonian' },
+];
 
 export const projectsInitialState: ProjectTextsState = {
     doneText: 'DONE',
@@ -18,6 +42,7 @@ export const projectsInitialState: ProjectTextsState = {
     modalTitleText: 'Add Languages',
     closeButtonText: 'Close',
     addButtonText: 'Add',
+    languagesText: languagesInitialState,
 };
 
 export const projectInitialState: ProjectState = {

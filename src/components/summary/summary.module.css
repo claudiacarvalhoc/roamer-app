@@ -5,7 +5,7 @@
 .summaryTitle {
     font-size: 21px;
     line-height: 27px;
-    width: 160px;
+    width: 100%;
     letter-spacing: -0.01em;
     color: #5489DC;
 }
@@ -23,9 +23,6 @@
     margin-top: 20px;
 }
 
-.icons {
-    max-width: 160px;
-}
 
 .badgesLine {
     display: flex;
@@ -39,6 +36,10 @@
 
 @media (max-width: 480px) {
     .container {
-        width: 220px;
+        width: 100%;
+        margin-right: 30px;
+    }
+    .icons {
+        display: inline;
     }
 }

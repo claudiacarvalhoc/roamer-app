@@ -4,7 +4,7 @@ import { UnitedKingdomFlag, ItalyFlag, RussiaFlag, MecedonianFlag } from './flag
 
 export interface LanguageProps {
     name: string,
-    flag: 'uk' | 'ru' | 'it' | 'mk',
+    flag: string;
 }
 
 const Language: FC<LanguageProps> = ({ name, flag }) => (

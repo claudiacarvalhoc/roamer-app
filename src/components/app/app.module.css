@@ -1,6 +1,6 @@
 .app {
     margin-left: 10%;
-  }
+}
 
 .project {
   margin-bottom: 40px;
@@ -12,6 +12,10 @@
 }
 
 @media (max-width: 480px) {
+  .app {
+    margin-right: 10%;
+    width: 300px;
+  }
   .collapsed {
     display: flex;
     justify-content: flex-start;

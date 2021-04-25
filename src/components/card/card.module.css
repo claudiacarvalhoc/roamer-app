@@ -3,8 +3,6 @@
 }
 
 .progressBar {
-    display: flex;
-    justify-content: flex-start;
     margin-top: 2px;
     margin-bottom: 12px;
 }
@@ -15,7 +13,5 @@
 }
 
 @media (max-width: 480px) {
-    .labels {
-        display: block;
-    }
+
 }

@@ -25,11 +25,12 @@ export interface ProjectTextsState {
     modalTitleText: string;
     closeButtonText: string;
     addButtonText: string;
+    languagesText: LanguageState[];
 }
 
 export interface TranslationState {
     id: number;
-    country: 'uk' | 'it' | 'ru' | 'mk';
+    country: string;
     language: string;
     done: number;
     wordsToDo: number;
@@ -45,11 +46,16 @@ export interface ProjectState {
     keys: number;
     issues: number;
     icons: string[];
-    badges: Badge[];
+    badges: BadgeState[];
     translationSections: TranslationState[];
 }
 
-export interface Badge {
+export interface BadgeState {
     name: string;
     type: 'orange' | 'green';
+}
+
+export interface LanguageState {
+    value: string;
+    label: string;
 }

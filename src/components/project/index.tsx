@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { ProjectState } from '../../redux/appState';
+import { LanguageState, ProjectState } from '../../redux/appState';
 import Summary from '../summary';
 import cn from 'classnames';
 import styles from './project.module.css';
@@ -10,6 +10,9 @@ import { connect } from 'react-redux';
 import { isExpanded, projectTexts } from '../../redux/app/selectors';
 import Button from '../button';
 import Modal from '../modal';
+import Select from 'react-select'
+import { AppDispatch } from '../../redux/store';
+import { addLanguages } from '../../redux/fetch';
 
 export interface ProjectOwnProps {
     className: string;
@@ -22,9 +25,11 @@ export interface ProjectStateProps {
     modalTitleText: string;
     closeButtonText: string;
     addButtonText: string;
+    languagesOptions: LanguageState[];
 }
 
 export interface ProjectDispatchProps {
+    addSelectedLanguages?: (project: ProjectState, selectedLanguages: LanguageState[]) => void;
 }
 
 export type ProjectProps = ProjectOwnProps & ProjectStateProps & ProjectDispatchProps;
@@ -37,11 +42,14 @@ const Project: FC<ProjectProps> = (props) => {
         modalTitleText,
         closeButtonText,
         addButtonText,
-        project
+        languagesOptions,
+        project,
+        addSelectedLanguages
     } = props;
     const { translationSections } = project;
     const isTranslationEmpty = translationSections.length === 0;
     const [isModalVisible, setModalVisibility] = useState(false);
+    const [selectedLanguages, setSelectedLanguages] = useState([]);
 
     const handleOpenModal = (): void => {
         setModalVisibility(true);
@@ -50,7 +58,11 @@ const Project: FC<ProjectProps> = (props) => {
         setModalVisibility(false);
     };
     const handleAddLanguage = (): void => {
-        console.log('trigger event!!');
+        console.log({
+            selectedLanguages
+        });
+        addSelectedLanguages(project, selectedLanguages);
+        handleCloseModal();
     };
 
     return (
@@ -69,13 +81,20 @@ const Project: FC<ProjectProps> = (props) => {
             }
             {isModalVisible && (
                 <Modal>
-                    <>
+                    <div className={styles.modal}>
                         <h2 className={styles.modalTitle} >{modalTitleText}</h2>
+                        <div className={styles.modalSelect}>
+                            <Select
+                                isMulti
+                                options={languagesOptions}
+                                onChange={(value, action) => setSelectedLanguages(value)}
+                            />
+                        </div>
                         <div className={styles.modalButtons}>
                             <Button className={styles.modalButton} text={closeButtonText} type={'secondary'} onClick={handleCloseModal} />
                             <Button className={styles.modalButton} text={addButtonText} type={'primary'} onClick={handleAddLanguage} />
                         </div>
-                    </>
+                    </div>
                 </Modal>
             )}
         </div >
@@ -91,9 +110,17 @@ const mapStateToProps = (state: RootState): ProjectStateProps => {
         closeButtonText: texts.closeButtonText,
         addButtonText: texts.addButtonText,
         modalTitleText: texts.modalTitleText,
+        languagesOptions: texts.languagesText,
     }
 };
 
+const mapDispatchToProps = (
+    dispatch: AppDispatch
+): ProjectDispatchProps => ({
+    addSelectedLanguages: (project: ProjectState, languages: LanguageState[]) => dispatch(addLanguages(project, languages)),
+});
+
 export default connect<ProjectStateProps>(
     mapStateToProps,
+    mapDispatchToProps,
 )(Project);

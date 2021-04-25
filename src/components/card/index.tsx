@@ -21,7 +21,6 @@ export interface CardStateProps {
 export type CardProps = CardOwnProps & CardStateProps;
 
 const Card: FC<CardProps> = ({ className, translation, texts }) => {
-
     return (<div className={cn(className, styles.container)}>
         <Language name={translation.language} flag={translation.country} />
         <ProgressBar className={styles.progressBar} percentage={translation.done} />
