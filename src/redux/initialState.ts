@@ -15,6 +15,9 @@ export const projectsInitialState: ProjectTextsState = {
     wordsToDoText: 'WORDS TO DO',
     unverifiedText: 'UNVERIFIED',
     addLanguageText: 'Add language',
+    modalTitleText: 'Add Languages',
+    closeButtonText: 'Close',
+    addButtonText: 'Add',
 };
 
 export const projectInitialState: ProjectState = {

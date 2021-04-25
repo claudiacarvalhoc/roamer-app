@@ -39,6 +39,9 @@ const props: CardProps = {
         wordsToDoText: 'WORDS TO DO',
         unverifiedText: 'UNVERIFIED',
         addLanguageText: 'Add language',
+        modalTitleText: 'Add Languages',
+        closeButtonText: 'Close',
+        addButtonText: 'Add',
     }
 };
 

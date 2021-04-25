@@ -22,6 +22,9 @@ export interface ProjectTextsState {
     wordsToDoText: string;
     unverifiedText: string;
     addLanguageText: string;
+    modalTitleText: string;
+    closeButtonText: string;
+    addButtonText: string;
 }
 
 export interface TranslationState {
