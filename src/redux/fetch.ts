@@ -1,7 +1,7 @@
 import { AppDispatch } from './store';
 import { addProjectAction, addLanguagesAction } from './app/actions';
 import { newProjectInitialState } from './initialState';
-import { LanguageState, ProjectState, TranslationState } from './appState';
+import { LanguageState, ProjectState } from './appState';
 
 /**
  * This function can be used in the future to create a project on the api
