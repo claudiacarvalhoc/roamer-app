@@ -30,7 +30,7 @@ export const createProject = (): ((dispatch: AppDispatch) => Promise<void>) => {
 export const addLanguages = (project: ProjectState, languages: LanguageState[]): ((dispatch: AppDispatch) => Promise<void>) => {
     return dispatch => {
         const translationSections = project.translationSections.slice();
-        let lastId = translationSections[translationSections.length - 1].id;
+        let lastId = translationSections.length > 0 ? translationSections[translationSections.length - 1].id : 0;
         translationSections.push(...languages.map(language => {
             return {
                 id: ++lastId,

@@ -18,7 +18,6 @@
     margin-right: 30px;
 }
 
-
 .card {
     margin: 9px 30px 9px 0px;
 }
@@ -68,6 +67,7 @@
     }
     .cards {
         display: block;
+        height: auto;
         margin-top: 40px;
         margin-right: 0px;
     }
