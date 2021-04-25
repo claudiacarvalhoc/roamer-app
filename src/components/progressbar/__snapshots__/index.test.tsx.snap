@@ -17,8 +17,8 @@ exports[`<ProgressBar /> render correctly with medium size 1`] = `
       style={
         Object {
           "border": "2px solid #5489DC",
-          "margin-left": "-2px",
-          "margin-top": "-2px",
+          "marginLeft": "-2px",
+          "marginTop": "-2px",
           "width": "100%",
         }
       }
@@ -44,8 +44,8 @@ exports[`<ProgressBar /> render correctly with percentage greater then 80 1`] = 
       style={
         Object {
           "border": "2px solid #5489DC",
-          "margin-left": "-2px",
-          "margin-top": "-2px",
+          "marginLeft": "-2px",
+          "marginTop": "-2px",
           "width": "90%",
         }
       }
@@ -71,8 +71,8 @@ exports[`<ProgressBar /> render correctly with percentage lower then 20 1`] = `
       style={
         Object {
           "border": "2px solid #DB1F35",
-          "margin-left": "-2px",
-          "margin-top": "-2px",
+          "marginLeft": "-2px",
+          "marginTop": "-2px",
           "width": "10%",
         }
       }
@@ -98,8 +98,8 @@ exports[`<ProgressBar /> render correctly with percentage lower then 40 1`] = `
       style={
         Object {
           "border": "2px solid #FFC400",
-          "margin-left": "-2px",
-          "margin-top": "-2px",
+          "marginLeft": "-2px",
+          "marginTop": "-2px",
           "width": "35%",
         }
       }
@@ -125,8 +125,8 @@ exports[`<ProgressBar /> render correctly with small size 1`] = `
       style={
         Object {
           "border": "2px solid #5489DC",
-          "margin-left": "-2px",
-          "margin-top": "-2px",
+          "marginLeft": "-2px",
+          "marginTop": "-2px",
           "width": "100%",
         }
       }
