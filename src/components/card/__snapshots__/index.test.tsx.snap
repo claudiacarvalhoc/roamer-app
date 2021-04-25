@@ -253,18 +253,18 @@ exports[`<Card /> render correctly 1`] = `
         >
           <Icons
             className="trash"
-            vectors={
+            types={
               Array [
                 "trash",
               ]
             }
           >
             <div
-              className="trash container"
+              className="trash"
             >
-              <TrashVector
+              <TrashIcon
                 className="icon"
-                key="vector-trash"
+                key="type-trash"
               >
                 <svg
                   className="icon"
@@ -290,7 +290,7 @@ exports[`<Card /> render correctly 1`] = `
                     </g>
                   </g>
                 </svg>
-              </TrashVector>
+              </TrashIcon>
             </div>
           </Icons>
         </div>

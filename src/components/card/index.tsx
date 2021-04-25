@@ -26,7 +26,7 @@ const Card: FC<CardProps> = ({ className, translation, texts, onDeleteClick }) =
     return (<div className={cn(className, styles.container)}>
         <Language name={translation.language} flag={translation.country} />
         <div onClick={() => onDeleteClick(translation.id)}>
-            <Icons className={styles.trash} vectors={['trash']} />
+            <Icons className={styles.trash} types={['trash']} />
         </div>
         <ProgressBar className={styles.progressBar} percentage={translation.done} />
         <div className={styles.labels}>

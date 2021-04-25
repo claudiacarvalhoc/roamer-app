@@ -2,35 +2,41 @@
 
 exports[`<Icons /> render correctly 1`] = `
 <div
-  className="test container"
+  className="test"
 >
-  <UpVector
+  <UpIcon
     className="icon"
-    key="vector-up"
+    key="type-up"
   />
-  <DownVector
+  <DownIcon
     className="icon"
-    key="vector-down"
+    key="type-down"
   />
-  <CheckVector
+  <CheckIcon
     className="icon"
-    key="vector-check"
+    key="type-check"
   />
-  <ProfileVector
+  <ProfileIcon
     className="icon"
-    key="vector-user"
+    key="type-user"
   />
-  <RateVector
+  <RateIcon
     className="icon"
-    key="vector-rate"
+    key="type-rate"
   />
-  <CameraVector
+  <CameraIcon
     className="icon"
-    key="vector-camera"
+    key="type-camera"
   />
-  <BookVector
+  <BookIcon
     className="icon"
-    key="vector-book"
+    key="type-book"
   />
 </div>
+`;
+
+exports[`<Icons /> render correctly when types are not defined 1`] = `
+<div
+  className="test"
+/>
 `;

@@ -2,51 +2,51 @@ import { FC } from 'react';
 import cn from 'classnames';
 import styles from './icons.module.css';
 import {
-    UpVector,
-    DownVector,
-    CheckVector,
-    ProfileVector,
-    RateVector,
-    CameraVector,
-    BookVector,
-    TrashVector,
-} from './vectors';
+    UpIcon,
+    DownIcon,
+    CheckIcon,
+    ProfileIcon,
+    RateIcon,
+    CameraIcon,
+    BookIcon,
+    TrashIcon,
+} from './icons';
 
 export interface IconsProps {
     className: string;
-    vectors: string[];
+    types: string[];
 }
 
-const Icons: FC<IconsProps> = ({ className, vectors }) => (
+const Icons: FC<IconsProps> = ({ className, types }) => (
     <div className={className}>
-        {vectors.map(vector => get(vector))}
+        {!!types && types.map(type => get(type))}
     </div>
 );
 
-const get = (vector: string) => {
-    if (vector === 'up') {
-        return <UpVector key={`vector-${vector}`} className={styles.icon} />;
+const get = (type: string) => {
+    if (type === 'up') {
+        return <UpIcon key={`type-${type}`} className={styles.icon} />;
     }
-    if (vector === 'down') {
-        return <DownVector key={`vector-${vector}`} className={styles.icon} />;
+    if (type === 'down') {
+        return <DownIcon key={`type-${type}`} className={styles.icon} />;
     }
-    if (vector === 'check') {
-        return <CheckVector key={`vector-${vector}`} className={styles.icon} />;
+    if (type === 'check') {
+        return <CheckIcon key={`type-${type}`} className={styles.icon} />;
     }
-    if (vector === 'user') {
-        return <ProfileVector key={`vector-${vector}`} className={styles.icon} />;
+    if (type === 'user') {
+        return <ProfileIcon key={`type-${type}`} className={styles.icon} />;
     }
-    if (vector === 'rate') {
-        return <RateVector key={`vector-${vector}`} className={styles.icon} />;
+    if (type === 'rate') {
+        return <RateIcon key={`type-${type}`} className={styles.icon} />;
     }
-    if (vector === 'camera') {
-        return <CameraVector key={`vector-${vector}`} className={styles.icon} />;
+    if (type === 'camera') {
+        return <CameraIcon key={`type-${type}`} className={styles.icon} />;
     }
-    if (vector === 'book') {
-        return <BookVector key={`vector-${vector}`} className={styles.icon} />;
+    if (type === 'book') {
+        return <BookIcon key={`type-${type}`} className={styles.icon} />;
     }
-    if (vector === 'trash') {
-        return <TrashVector key={`vector-${vector}`} className={styles.icon} />;
+    if (type === 'trash') {
+        return <TrashIcon key={`type-${type}`} className={styles.icon} />;
     }
     return <></>;
 };
