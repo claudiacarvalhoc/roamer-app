@@ -1,29 +1,7 @@
 import { AppActions } from './actions';
 import { ADD_PROJECT, EXPAND_PROJECTS, COLLAPSE_PROJECTS } from "../types";
 import { AppState } from '../appState';
-import { projectStub } from '../../stubs/project';
-
-const appInitialState: AppState = {
-    expand: true,
-    projects: [
-        projectStub
-    ],
-    MenuTextsState: {
-        projectText: 'New project ⇧⌘P',
-        expandText: 'Expand all',
-        collapseText: 'Collapse all',
-    },
-    projectTexts: {
-        doneText: 'DONE',
-        baseWordsText: 'BASE WORDS',
-        teamText: 'TEAM',
-        keysText: 'KEYS',
-        qaIssuesText: 'QA ISSUES',
-        wordsToDoText: 'WORDS TO DO',
-        unverifiedText: 'UNVERIFIED',
-        addLanguageText: 'Add language',
-    },
-};
+import { appInitialState } from '../../redux/initialState';
 
 export const appReducer = (
     state: AppState = appInitialState,
@@ -31,7 +9,7 @@ export const appReducer = (
 ): AppState => {
     switch (action.type) {
         case ADD_PROJECT:
-            const id = state.projects.length;
+            const id = state.projects.length + 1;
             const project = {
                 ...action.project,
                 id,

@@ -28,7 +28,7 @@ const App: FC<AppProps> = ({ isExpanded, projects }) => {
         <div className={cn({
           [styles.collapsed]: !isExpanded
         })}>
-          {projects.map(project => <Project className={styles.project} project={project} />)}
+          {projects.map(project => <Project key={`project-${project.id}`} className={styles.project} project={project} />)}
         </div>
       )}
     </div>

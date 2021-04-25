@@ -147,7 +147,6 @@ export const projectInitialState: ProjectState = {
 export const appInitialState: AppState = {
     expand: true,
     projects: [
-        projectInitialState,
         projectInitialState
     ],
     MenuTextsState: menuInitialState,

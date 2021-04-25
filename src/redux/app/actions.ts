@@ -2,7 +2,7 @@ import { Action } from 'redux';
 import { ProjectState } from "../appState";
 import { ADD_PROJECT, EXPAND_PROJECTS, COLLAPSE_PROJECTS } from "../types";
 
-export interface addProjectAction extends Action<string> {
+export interface AddProjectAction extends Action<string> {
     project: ProjectState;
 }
 
@@ -13,9 +13,7 @@ export interface CollapseProjectAction extends Action {
 
 }
 
-export const addProjectAction = (
-    project: ProjectState
-): addProjectAction => ({
+export const addProjectAction = (project: ProjectState): AddProjectAction => ({
     type: ADD_PROJECT,
     project,
 });
@@ -28,4 +26,4 @@ export const collapseProjectAction = (): CollapseProjectAction => ({
     type: COLLAPSE_PROJECTS,
 });
 
-export type AppActions = addProjectAction;
+export type AppActions = AddProjectAction;

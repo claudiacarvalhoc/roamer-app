@@ -19,14 +19,14 @@ const ProgressBar: FC<ProgressBarProps> = ({ className, percentage }) => {
     const progressStyle = {
         width: `${percentage}%`,
         'border': `2px solid ${getColor(percentage)}`,
-        'margin-top': '-2px',
-        'margin-left': '-2px',
+        marginTop: '-2px',
+        marginLeft: '-2px',
     };
 
     return (
         <div className={cn(className)}>
             <div style={containerStyle}>
-                <div style={progressStyle}></div>
+                <div style={progressStyle} />
             </div>
         </div>
     );
