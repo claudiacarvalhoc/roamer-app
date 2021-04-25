@@ -9,6 +9,7 @@ import {
     RateVector,
     CameraVector,
     BookVector,
+    TrashVector,
 } from './vectors';
 
 export interface IconsProps {
@@ -17,7 +18,7 @@ export interface IconsProps {
 }
 
 const Icons: FC<IconsProps> = ({ className, vectors }) => (
-    <div className={cn(className, styles.container)}>
+    <div className={className}>
         {vectors.map(vector => get(vector))}
     </div>
 );
@@ -43,6 +44,9 @@ const get = (vector: string) => {
     }
     if (vector === 'book') {
         return <BookVector key={`vector-${vector}`} className={styles.icon} />;
+    }
+    if (vector === 'trash') {
+        return <TrashVector key={`vector-${vector}`} className={styles.icon} />;
     }
     return <></>;
 };

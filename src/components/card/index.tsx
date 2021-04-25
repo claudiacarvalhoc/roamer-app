@@ -8,10 +8,12 @@ import { connect } from 'react-redux';
 import Language from '../language';
 import ProgressBar from '../progressbar';
 import Label from '../label';
+import Icons from '../icons';
 
 export interface CardOwnProps {
     className: string;
     translation: TranslationState;
+    onDeleteClick: (translationId: number) => void;
 }
 
 export interface CardStateProps {
@@ -20,15 +22,19 @@ export interface CardStateProps {
 
 export type CardProps = CardOwnProps & CardStateProps;
 
-const Card: FC<CardProps> = ({ className, translation, texts }) => {
+const Card: FC<CardProps> = ({ className, translation, texts, onDeleteClick }) => {
     return (<div className={cn(className, styles.container)}>
         <Language name={translation.language} flag={translation.country} />
+        <div onClick={() => onDeleteClick(translation.id)}>
+            <Icons className={styles.trash} vectors={['trash']} />
+        </div>
         <ProgressBar className={styles.progressBar} percentage={translation.done} />
         <div className={styles.labels}>
             <Label name={texts.doneText} value={`${translation.done}%`} highlighted={false} />
             <Label name={texts.wordsToDoText} value={`${translation.wordsToDo}`} highlighted={true} />
             <Label name={texts.unverifiedText} value={`${translation.unverified}`} highlighted={true} />
         </div>
+
     </div>);
 };
 

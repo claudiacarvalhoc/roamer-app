@@ -1,6 +1,6 @@
 import { Action } from 'redux';
 import { ProjectState, TranslationState } from "../appState";
-import { ADD_PROJECT, ADD_LANGUAGES, EXPAND_PROJECTS, COLLAPSE_PROJECTS } from "../types";
+import { ADD_PROJECT, ADD_LANGUAGES, REMOVE_TRANSLATION, EXPAND_PROJECTS, COLLAPSE_PROJECTS } from "../types";
 
 export interface AddProjectAction extends Action<string> {
     project: ProjectState;
@@ -9,6 +9,11 @@ export interface AddProjectAction extends Action<string> {
 export interface AddLanguagesAction extends Action<string> {
     projectId: number;
     translationsSections: TranslationState[];
+}
+
+export interface RemoveTranslationAction extends Action<string> {
+    projectId: number;
+    translationId: number;
 }
 
 export interface ExpandProjectsAction extends Action {
@@ -29,6 +34,12 @@ export const addLanguagesAction = (projectId: number, translationsSections: Tran
     translationsSections,
 });
 
+export const removeTranslationAction = (projectId: number, translationId: number): RemoveTranslationAction => ({
+    type: REMOVE_TRANSLATION,
+    projectId,
+    translationId,
+});
+
 export const expandProjectsAction = (): ExpandProjectsAction => ({
     type: EXPAND_PROJECTS,
 });
@@ -37,4 +48,4 @@ export const collapseProjectAction = (): CollapseProjectAction => ({
     type: COLLAPSE_PROJECTS,
 });
 
-export type AppActions = AddProjectAction & AddLanguagesAction;
+export type AppActions = AddProjectAction & AddLanguagesAction & RemoveTranslationAction;

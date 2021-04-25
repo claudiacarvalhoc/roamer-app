@@ -12,7 +12,7 @@ import Button from '../button';
 import Modal from '../modal';
 import Select from 'react-select'
 import { AppDispatch } from '../../redux/store';
-import { addLanguages } from '../../redux/fetch';
+import { addLanguages, removeTranslation } from '../../redux/fetch';
 
 export interface ProjectOwnProps {
     className: string;
@@ -29,7 +29,8 @@ export interface ProjectStateProps {
 }
 
 export interface ProjectDispatchProps {
-    addSelectedLanguages?: (project: ProjectState, selectedLanguages: LanguageState[]) => void;
+    addSelectedLanguages: (project: ProjectState, selectedLanguages: LanguageState[]) => void;
+    removeTranslation: (projectId: number, translationId: number) => void;
 }
 
 export type ProjectProps = ProjectOwnProps & ProjectStateProps & ProjectDispatchProps;
@@ -44,7 +45,8 @@ const Project: FC<ProjectProps> = (props) => {
         addButtonText,
         languagesOptions,
         project,
-        addSelectedLanguages
+        addSelectedLanguages,
+        removeTranslation,
     } = props;
     const { translationSections } = project;
     const isTranslationEmpty = translationSections.length === 0;
@@ -64,7 +66,6 @@ const Project: FC<ProjectProps> = (props) => {
         addSelectedLanguages(project, selectedLanguages);
         handleCloseModal();
     };
-
     return (
         <div className={cn(className, styles.container, {
             [styles.collapsed]: !isExpanded
@@ -74,7 +75,7 @@ const Project: FC<ProjectProps> = (props) => {
                 <>
                     <Divider className={styles.divider} />
                     <div className={styles.cards}>
-                        {!isTranslationEmpty && translationSections.map(translation => <Card key={`translation_${translation.id}`} className={styles.card} translation={translation} />)}
+                        {!isTranslationEmpty && translationSections.map(translation => <Card key={`translation_${translation.id}`} className={styles.card} translation={translation} onDeleteClick={() => removeTranslation(project.id, translation.id)} />)}
                         <Button className={styles.addcard} text={addLanguageText} type={'secondary'} onClick={handleOpenModal} />
                     </div>
                 </>)
@@ -87,7 +88,7 @@ const Project: FC<ProjectProps> = (props) => {
                             <Select
                                 isMulti
                                 options={languagesOptions}
-                                onChange={(value, action) => setSelectedLanguages(value)}
+                                onChange={(value) => setSelectedLanguages(value)}
                             />
                         </div>
                         <div className={styles.modalButtons}>
@@ -118,9 +119,10 @@ const mapDispatchToProps = (
     dispatch: AppDispatch
 ): ProjectDispatchProps => ({
     addSelectedLanguages: (project: ProjectState, languages: LanguageState[]) => dispatch(addLanguages(project, languages)),
+    removeTranslation: (projectId: number, translationId: number) => dispatch(removeTranslation(projectId, translationId)),
 });
 
-export default connect<ProjectStateProps>(
+export default connect<ProjectStateProps, ProjectDispatchProps>(
     mapStateToProps,
     mapDispatchToProps,
 )(Project);

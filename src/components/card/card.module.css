@@ -12,6 +12,10 @@
     justify-content: space-between;
 }
 
-@media (max-width: 480px) {
-
+.trash {
+    margin-top: -25px;
+    margin-bottom: 5px;
+    margin-right: -10px;
+    position: relative;
+    float: right;
 }
