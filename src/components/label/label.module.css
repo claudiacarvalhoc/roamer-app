@@ -1,5 +1,6 @@
 .label {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 .name {
     color: #8E8E8E;

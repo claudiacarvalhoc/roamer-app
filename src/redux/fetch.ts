@@ -39,7 +39,7 @@ export const addLanguages = (project: ProjectState, languages: LanguageState[]):
                 done: 0,
                 wordsToDo: 40000,
                 unverified: 0,
-            }
+            };
         }));
         dispatch(addLanguagesAction(project.id, translationSections));
         return Promise.resolve();
