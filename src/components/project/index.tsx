@@ -14,12 +14,12 @@ import Select from 'react-select'
 import { AppDispatch } from '../../redux/store';
 import { addLanguages, removeTranslation } from '../../redux/fetch';
 
-export interface ProjectOwnProps {
+interface ProjectOwnProps {
     className: string;
     project: ProjectState;
 }
 
-export interface ProjectStateProps {
+interface ProjectStateProps {
     isExpanded: boolean;
     addLanguageText: string;
     modalTitleText: string;
@@ -28,7 +28,7 @@ export interface ProjectStateProps {
     languagesOptions: LanguageState[];
 }
 
-export interface ProjectDispatchProps {
+interface ProjectDispatchProps {
     addSelectedLanguages: (project: ProjectState, selectedLanguages: LanguageState[]) => void;
     removeTranslation: (projectId: number, translationId: number) => void;
 }
@@ -73,15 +73,15 @@ const Project: FC<ProjectProps> = (props) => {
             <Summary project={project} />
             {isExpanded && (
                 <>
-                    <Divider className={styles.divider} />
-                    <div className={styles.cards}>
+                    <Divider data-test="project-divider" className={styles.divider} />
+                    <div data-test="project-translations" className={styles.cards}>
                         {!isTranslationEmpty && translationSections.map(translation => <Card key={`translation_${translation.id}`} className={styles.card} translation={translation} onDeleteClick={() => removeTranslation(project.id, translation.id)} />)}
-                        <Button className={styles.addcard} text={addLanguageText} type={'secondary'} onClick={handleOpenModal} />
+                        <Button data-test="project-add-language" className={styles.addcard} text={addLanguageText} type={'secondary'} onClick={handleOpenModal} />
                     </div>
                 </>)
             }
             {isModalVisible && (
-                <Modal>
+                <Modal data-test="project-add-language">
                     <div className={styles.modal}>
                         <h2 className={styles.modalTitle} >{modalTitleText}</h2>
                         <div className={styles.modalSelect}>

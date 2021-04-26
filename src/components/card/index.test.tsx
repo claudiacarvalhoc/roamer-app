@@ -7,7 +7,8 @@ import { Provider } from 'react-redux';
 import { appInitialState } from '../../redux/initialState';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
-const getShallowWrapper = (props) => {
+Enzyme.configure({ adapter: new Adapter() });
+const getMountWrapper = (props) => {
     const store = configureMockStore()({
         app: appInitialState
     });
@@ -17,8 +18,6 @@ const getShallowWrapper = (props) => {
         </Provider>
     );
 };
-
-Enzyme.configure({ adapter: new Adapter() });
 
 const props: CardProps = {
     className: 'test',
@@ -47,7 +46,7 @@ const props: CardProps = {
 
 describe('<Card />', () => {
     it('render correctly', () => {
-        const component = getShallowWrapper(props);
+        const component = getMountWrapper(props);
         expect(toJson(component)).toMatchSnapshot();
     });
 });

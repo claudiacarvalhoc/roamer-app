@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Project /> render correctly 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <Connect(Project)
+    className=""
+    project={
+      Object {
+        "badges": Array [
+          Object {
+            "name": "Roamer",
+            "type": "orange",
+          },
+          Object {
+            "name": "iOS",
+            "type": "green",
+          },
+        ],
+        "baseWords": 160246,
+        "done": 0,
+        "icons": Array [
+          "up",
+          "down",
+          "check",
+          "user",
+          "rate",
+          "camera",
+          "book",
+        ],
+        "id": 0,
+        "issues": 47514,
+        "keys": 1834,
+        "name": "Roamer App (Android SDK test)",
+        "team": 26,
+        "translationSections": Array [],
+      }
+    }
+  />
+</ContextProvider>
+`;

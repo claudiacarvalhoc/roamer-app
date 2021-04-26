@@ -10,13 +10,13 @@ import ProgressBar from '../progressbar';
 import Label from '../label';
 import Icons from '../icons';
 
-export interface CardOwnProps {
+interface CardOwnProps {
     className: string;
     translation: TranslationState;
     onDeleteClick: (translationId: number) => void;
 }
 
-export interface CardStateProps {
+interface CardStateProps {
     texts: ProjectTextsState;
 }
 

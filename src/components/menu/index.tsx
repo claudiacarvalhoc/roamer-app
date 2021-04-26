@@ -8,10 +8,6 @@ import { AppDispatch } from '../../redux/store';
 import { expandProjectsAction, collapseProjectAction } from '../../redux/app/actions';
 import { createProject } from '../../redux/fetch';
 
-export interface MenuOwnProps {
-
-}
-
 export interface MenuStateProps {
     projectText: string;
     expandText: string;
@@ -24,7 +20,7 @@ export interface MenuDispatchProps {
     collapse: () => void;
 }
 
-export type MenuProps = MenuOwnProps & MenuStateProps & MenuDispatchProps;
+export type MenuProps = MenuStateProps & MenuDispatchProps;
 
 const Menu: FC<MenuProps> = ({
     projectText,

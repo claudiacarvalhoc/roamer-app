@@ -9,11 +9,11 @@ import Label from '../label';
 import Icons from '../icons';
 import Badge from '../badge';
 
-export interface SummaryOwnProps {
+interface SummaryOwnProps {
     project: ProjectState;
 }
 
-export interface SummaryStateProps {
+interface SummaryStateProps {
     texts: ProjectTextsState;
 }
 
@@ -39,9 +39,11 @@ const Summary: FC<SummaryProps> = ({ project, texts }) => {
             <div className={styles.iconsLines}>
                 <Icons className={styles.icons} types={project.icons} />
             </div>
-            <div className={styles.badgesLine}>
-                {hasBadges && project.badges.map(badge => <Badge key={`badge-${badge.name}`} className={styles.badge} name={badge.name} type={badge.type} />)}
-            </div>
+            {hasBadges && (
+                <div data-test="summary-badges" className={styles.badgesLine}>
+                    {project.badges.map(badge => <Badge key={`badge-${badge.name}`} className={styles.badge} name={badge.name} type={badge.type} />)}
+                </div>
+            )}
         </div>
     );
 };
