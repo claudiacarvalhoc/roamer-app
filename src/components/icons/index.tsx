@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import cn from 'classnames';
 import styles from './icons.module.css';
 import {
     UpIcon,

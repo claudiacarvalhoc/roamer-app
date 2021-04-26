@@ -17,7 +17,7 @@ jest.mock('../../redux/app/actions');
 jest.mock('../../redux/fetch');
 
 const mockAction = () => ({ type: 'MOCK' });
-const mockFetch = () => ({});
+// const mockFetch = () => ({});
 
 const getMountWrapper = () => {
     const store = configureMockStore([thunk])({

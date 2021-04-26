@@ -30,7 +30,7 @@
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage --runInBand --watchAll=false",
     "eject": "react-scripts eject",
-    "lint": "eslint '*/**/*.{ts,tsx}' --quiet --fix"
+    "lint": "eslint '*/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": [
@@ -63,7 +63,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts",
+      "!src/**/*.test.ts",
       "!src/index.tsx",
       "!src/serviceWorker.ts",
       "!src/reportWebVitals.ts"
