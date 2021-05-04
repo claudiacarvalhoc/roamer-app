@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/roamer-app/static/css/main.2dede747.chunk.css",
+    "main.js": "/roamer-app/static/js/main.bf40fd18.chunk.js",
+    "main.js.map": "/roamer-app/static/js/main.bf40fd18.chunk.js.map",
+    "runtime-main.js": "/roamer-app/static/js/runtime-main.0d41ff6a.js",
+    "runtime-main.js.map": "/roamer-app/static/js/runtime-main.0d41ff6a.js.map",
+    "static/js/2.fde2ce8b.chunk.js": "/roamer-app/static/js/2.fde2ce8b.chunk.js",
+    "static/js/2.fde2ce8b.chunk.js.map": "/roamer-app/static/js/2.fde2ce8b.chunk.js.map",
+    "static/js/3.5e57daa3.chunk.js": "/roamer-app/static/js/3.5e57daa3.chunk.js",
+    "static/js/3.5e57daa3.chunk.js.map": "/roamer-app/static/js/3.5e57daa3.chunk.js.map",
+    "index.html": "/roamer-app/index.html",
+    "static/css/main.2dede747.chunk.css.map": "/roamer-app/static/css/main.2dede747.chunk.css.map",
+    "static/js/2.fde2ce8b.chunk.js.LICENSE.txt": "/roamer-app/static/js/2.fde2ce8b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d41ff6a.js",
+    "static/js/2.fde2ce8b.chunk.js",
+    "static/css/main.2dede747.chunk.css",
+    "static/js/main.bf40fd18.chunk.js"
+  ]
+}

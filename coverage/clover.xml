@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1619449702052" clover="3.2.0">
+  <project timestamp="1619449702052" name="All files">
+    <metrics statements="217" coveredstatements="144" conditionals="67" coveredconditionals="48" methods="81" coveredmethods="48" elements="365" coveredelements="240" complexity="0" loc="217" ncloc="217" packages="17" files="27" classes="27"/>
+    <package name="src">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="react-app-env.d.ts" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/react-app-env.d.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="src.components.app">
+      <metrics statements="5" coveredstatements="5" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/app/index.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="22" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.badge">
+      <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/badge/index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.button">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/button/index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="23" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.card">
+      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/card/index.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="16" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="41" count="16" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.divider">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/divider/index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icons">
+      <metrics statements="37" coveredstatements="36" conditionals="18" coveredconditionals="17" methods="11" coveredmethods="11"/>
+      <file name="icons.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/icons/icons.tsx">
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="43" count="4" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="52" count="4" type="stmt"/>
+        <line num="53" count="16" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/icons/index.tsx">
+        <metrics statements="21" coveredstatements="20" conditionals="18" coveredconditionals="17" methods="3" coveredmethods="3"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="20" type="stmt"/>
+        <line num="21" count="37" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="37" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="29" count="34" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="32" count="31" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="35" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="38" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="41" count="22" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="44" count="19" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="47" count="16" type="cond" truecount="1" falsecount="1"/>
+        <line num="48" count="16" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.label">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/label/index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="60" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.language">
+      <metrics statements="20" coveredstatements="19" conditionals="8" coveredconditionals="7" methods="6" coveredmethods="6"/>
+      <file name="flags.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/language/flags.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/language/index.tsx">
+        <metrics statements="12" coveredstatements="11" conditionals="8" coveredconditionals="7" methods="2" coveredmethods="2"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="20" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="23" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="26" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="29" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.menu">
+      <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="7"/>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/menu/index.tsx">
+        <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="7"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="62" count="5" type="stmt"/>
+        <line num="63" count="5" type="stmt"/>
+        <line num="70" count="2" type="stmt"/>
+        <line num="72" count="5" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.modal">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/modal/index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.progressbar">
+      <metrics statements="15" coveredstatements="15" conditionals="12" coveredconditionals="12" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/progressbar/index.tsx">
+        <metrics statements="15" coveredstatements="15" conditionals="12" coveredconditionals="12" methods="2" coveredmethods="2"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="23" type="stmt"/>
+        <line num="19" count="23" type="stmt"/>
+        <line num="26" count="23" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="36" count="23" type="cond" truecount="4" falsecount="0"/>
+        <line num="37" count="6" type="stmt"/>
+        <line num="39" count="17" type="cond" truecount="4" falsecount="0"/>
+        <line num="40" count="9" type="stmt"/>
+        <line num="42" count="8" type="cond" truecount="4" falsecount="0"/>
+        <line num="43" count="7" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.project">
+      <metrics statements="24" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="11" coveredmethods="5"/>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/project/index.tsx">
+        <metrics statements="24" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="11" coveredmethods="5"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="51" count="3" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+        <line num="53" count="3" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="59" count="3" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="62" count="3" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="69" count="3" type="stmt"/>
+        <line num="78" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="106" count="2" type="stmt"/>
+        <line num="107" count="2" type="stmt"/>
+        <line num="108" count="2" type="stmt"/>
+        <line num="118" count="2" type="stmt"/>
+        <line num="120" count="2" type="stmt"/>
+        <line num="121" count="0" type="stmt"/>
+        <line num="122" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.summary">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="index.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/components/summary/index.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="43" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.redux">
+      <metrics statements="49" coveredstatements="14" conditionals="8" coveredconditionals="0" methods="11" coveredmethods="0"/>
+      <file name="appState.ts" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/redux/appState.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="fetch.ts" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/redux/fetch.ts">
+        <metrics statements="16" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="60" count="3" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+      </file>
+      <file name="initialState.ts" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/redux/initialState.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="33" count="5" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="175" count="5" type="stmt"/>
+        <line num="184" count="5" type="stmt"/>
+      </file>
+      <file name="localStorage.ts" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/redux/localStorage.ts">
+        <metrics statements="12" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+      <file name="reducers.ts" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/redux/reducers.ts">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="store.ts" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/redux/store.ts">
+        <metrics statements="9" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+      </file>
+      <file name="types.ts" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/redux/types.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.redux.app">
+      <metrics statements="27" coveredstatements="9" conditionals="7" coveredconditionals="0" methods="13" coveredmethods="4"/>
+      <file name="actions.ts" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/redux/app/actions.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+      </file>
+      <file name="reducer.ts" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/redux/app/reducer.ts">
+        <metrics statements="18" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="6"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+      </file>
+      <file name="selectors.ts" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/redux/app/selectors.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="20" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="useDebouncer.tsx" path="/Users/claudia.crisostomo/Documents/elvisp/lokalise-challenge/romaer-app-2/roamer-app/src/utils/useDebouncer.tsx">
+        <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
